@@ -1,0 +1,54 @@
+html, body {
+	color: #AAA;
+	font-size: 14px;
+	font-family: Arial, sans-serif;
+	padding: 0;
+	margin: 0;
+	height: 4900px;
+	background: #131414;
+}
+
+section#content{
+	width: 960px;
+	overflow: hidden;
+	height: 4900px;
+	position: relative;
+	z-index: 0;
+}
+
+section#map {
+	position: absolute;
+	top: 470px;
+	z-index: 1;
+
+}
+
+section#portfolio {
+	position: absolute;
+	top: 1440px;
+	z-index: 2;
+
+}
+
+section#knowledge {
+	position: absolute;
+	top: 2180px;
+	z-index: 3;
+
+}
+
+section#experience{
+	position: absolute;
+	top: 3150px;
+	z-index: 3;
+}
+
+section#contact{
+	position: absolute;
+	top: 4070px;
+	z-index: 3;
+}
+
+footer{
+
+}
