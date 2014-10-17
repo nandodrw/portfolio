@@ -2,47 +2,82 @@ html, body {
 	color: #AAA;
 	font-size: 14px;
 	font-family: 'Ubuntu', sans-serif !important;
-	color: white;
+	color: black;
 	padding: 0;
 	margin: 0;
 	height: 4900px;
-	background: #9a009a;
+	/*background: #9a009a;*/
+	/*background-color:red;*/
+
+	/*css blue print*/
+	/*background-color:#269;
+	background-image: linear-gradient(white 2px, transparent 2px),
+	linear-gradient(90deg, white 2px, transparent 2px),
+	linear-gradient(rgba(255,255,255,.3) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(255,255,255,.3) 1px, transparent 1px);
+	background-size:100px 100px, 100px 100px, 20px 20px, 20px 20px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;*/
+
+
+	background-color:#269;
+	background-image:
+	linear-gradient(rgba(44,154,172,0.2) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(44,154,172,0.2) 1px, transparent 1px);
+	background-size:10px 10px, 10px 10px, 10px 10px, 10px 10px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
+	/*image blue print*/
+	/*background-image: url('images/blueprint.png');*/
 }
 
 section {
-	width: 960px;
+	width: 95%;
+	margin-left:2.5% !important;
+	margin-right:2.5% !important;
+}
+
+section#content {
+	width: 100%;
 	margin: 0 auto !important;
+	overflow: hidden;
+	height: 4900px;
+	position: relative;
+	z-index: 0;
+	/*border:16px solid white;*/
+	/*background-color: white;*/
+	/*background-image: radial-gradient(gray 10%, transparent 10%);*/
+	/*background-size:10px 10px;*/
+	/*background-position: 0 0, 30px 30px;*/
 	/*temporal*/
-	background:rgba(255, 255, 255, 0.55);
+	/*background:rgba(255, 255, 255, 0.55);*/
 }
 
 header {
+	position: absolute;
+	z-index: 2;
+	width: 100%;
+	top: 30px;
 	text-align: center;
+	color: white;
 }
 section h1{
 	font-size:350%;
 	font-weight: 300;
-	margin-top: 43px;
 	margin-bottom: 12px;
+	text-shadow:rgba(207, 3, 0,1) 1px 1px 4px, rgba(207, 3, 0,1) -1px -1px 4px;
 }
 
 section h2{
 	font-size:216%;
 	font-weight:300;
-}
-
-section#content{
-	width: 960px;
-	overflow: hidden;
-	height: 4900px;
-	position: relative;
-	z-index: 0;
+	text-shadow:rgba(207, 3, 0,1) 0.5px 0.5px 1px, rgba(207, 3, 0,1) -0.5px -0.5px 1px;
 }
 
 section#map {
 	position: absolute;
-	top: 470px;
+	top: 350px;
 	z-index: 1;
+	text-align: center;
 	/*background: red;*/
 }
 
@@ -79,4 +114,59 @@ footer{
 	top: 4810px;
 	z-index: 3;
 	background: black;
+}
+
+
+/*specifict styles*/
+
+.header_container{
+	background-image: url("images/smoke.jpg");
+	background-position: right top;
+}
+
+.header{
+	background-color:rgba(207, 3, 0, 0.6);
+	background-image:
+	-webkit-linear-gradient(rgba(250,250,250,0.2) 1px, transparent 1px),
+	-webkit-linear-gradient(left, rgba(250,250,250,0.2) 1px, transparent 1px);
+	background-image:
+	-o-linear-gradient(rgba(250,250,250,0.2) 1px, transparent 1px),
+	-o-linear-gradient(left, rgba(250,250,250,0.2) 1px, transparent 1px);
+	background-image:
+	linear-gradient(rgba(250,250,250,0.2) 1px, transparent 1px),
+	linear-gradient(to right, rgba(250,250,250,0.2) 1px, transparent 1px);;
+	background-size:10px 10px, 10px 10px, 10px 10px, 10px 10px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+	padding: 1.5em 0 1.6em 0;
+}
+
+
+.link_map_container{
+	padding-left: 2%;
+	padding-right: 2%;
+	width: 21%;
+	float: left;
+}
+
+.link_map {
+
+	color: white;
+
+	background-color:#269;
+	background-image: linear-gradient(#rgba(44,154,172,0.2) 1px, transparent 1px),
+	linear-gradient(90deg, rgba(44,154,172,0.2) 1px, transparent 1px),
+	linear-gradient(#4396d6 1px, transparent 1px),
+	linear-gradient(90deg, #4396d6 1px, transparent 1px);
+	background-size:50px 50px, 50px 50px, 10px 10px, 10px 10px;
+	background-position:-2px -2px, -2px -2px, -1px -1px, -1px -1px;
+
+	width: 100%;
+
+
+	padding-top: 90px;
+	padding-bottom: 90px;
+
+	border-radius:5px;
+
+	font-size: 200%;
 }
