@@ -51,6 +51,15 @@ p {
 	/*text-shadow: 0 1px 1px rgba(0,0,0,0.4);*/
 }
 
+.borde-derecho-inferior {
+	border-bottom-right-radius:4px;
+}
+
+.borde-izquierdo-inferior {
+	border-bottom-left-radius:4px;
+}
+
+
 /*****************************************************/
 /*************        Header         *****************/
 /*****************************************************/
@@ -260,6 +269,11 @@ section#map {
   /* transition:border 5s ease; */
   transition: border-width 5s ease;
   transition: border-color 5s ease;
+}
+
+.link_map:active{
+  background-color:rgba(208, 208, 37, 1);
+  color: rgba(34, 102, 153, 1);
 }
 
 .link_map:hover{
