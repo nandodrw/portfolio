@@ -447,8 +447,172 @@ section#portfolio {
 	position: absolute;
 	top: 1440px;
 	z-index: 2;
-	/*background: yellow;*/
+	text-align: center;
+	width: 94%;
+	/*height: 600px;*/
+	margin-left:3%;
+	margin-right: 3%;
+	border-radius:4px;
+	background: rgba(256, 256, 256, 1);
+
 }
+
+.portfolio-container {
+  width: 100%;
+	float: left;
+	height: 600px;
+  perspective: 500px;
+  background-color:white;
+}
+
+.main-port-box {
+  transform-style: preserve-3d;
+  width:61.8%;
+  height: 100%;
+  float:left;
+  position:relative;
+  z-index:3;
+  transform: translate3d(0,0,-300px);
+  transition:transform 2s ease-out;
+  cursor:pointer;
+}
+
+.main-box-top{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform: rotate3d( 1, 0, 0, 90deg) translate3d(0,0,300px);
+  background-color: rgba(233, 78, 78, 1)
+}
+.main-box-front{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform: translate3d(0,0,300px);
+  background-color:rgba(242, 146, 146, 1);
+}
+.main-box-bottom{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform: rotate3d( -1, 0, 0, 90deg) translate3d(0,0,300px);
+  background-color:rgba(104, 13, 13, 1);
+}
+.main-box-back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  transform: rotate3d( 0, 1, 0, 180deg) translate3d(0,0,300px);
+  background-color:rgba(141, 17, 17, 1);
+}
+
+.behind-scenes{
+  height:100%;
+  width:38.2%;
+  position:relative;
+  z-index:2;
+  float:left;
+}
+
+
+.project-detail{
+	transform-style: preserve-3d;
+  height:61.8%;
+  width: 100%;
+  float:left;
+  position:relative;
+  z-index:3;
+  transition:transform 2s ease-out;
+  cursor:pointer;
+}
+
+.project-detail:hover{
+  transform: rotate3d(0,0,1,90deg);
+}
+
+
+.detail-box-right{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	transform-origin: right center;
+	background-color: rgba(118, 141, 17, 1);
+	/*transform defined on initializer.js*/
+}
+
+.detail-box-front{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	background-color: rgba(194, 229, 42, 1);
+	/*transform defined on initializer.js*/
+}
+
+.detail-box-left{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	transform-origin: left center;
+	background-color: rgba(141, 168, 21, 1);
+	/*transform defined on initializer.js*/
+}
+
+.detail-box-back{
+	position: absolute;
+	width: 100%;
+	height:100%;
+  background-color: rgba(237, 247, 191, 1);
+	/*transform defined on initializer.js*/
+}
+
+.project-spects{
+	transform-style: preserve-3d;
+	height:38.2%;
+  width: 100%;
+  float:left;
+  postion:relative;
+  z-index:2;
+  transition:transform 2s ease-out;
+  cursor:pointer;
+}
+
+.spects-box-right{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	transform-origin: right center;
+	 background-color: rgba(96, 103, 235, 1);
+	/*transform defined on initializer.js*/
+}
+
+.spects-box-front{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	 background-color: rgba(14, 19, 113, 1);
+	/*transform defined on initializer.js*/
+}
+
+.spects-box-left{
+	position: absolute;
+	width: 100%;
+	height:100%;
+	transform-origin: left center;
+	 background-color: rgba(42, 51, 229, 1);
+	/*transform defined on initializer.js*/
+}
+
+.spects-box-back{
+	position: absolute;
+	width: 100%;
+	height:100%;
+  background-color: rgba(132, 138, 240, 1);
+	/*transform defined on initializer.js*/
+}
+/*****************************************************/
+/**************      knowledge        ****************/
+/*****************************************************/
+
 
 section#knowledge {
 	position: absolute;
