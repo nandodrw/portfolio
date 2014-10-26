@@ -2,6 +2,14 @@
 
   $(document).ready(function(){
 
+    //ajusting size of section dynamically
+    var screenHeight = 600;
+    if(window.innerHeight){
+      screenHeight = window.innerHeight;
+    };
+    $(".section-container").css("height",String(screenHeight));
+
+
     var portfolioLocation = 1440;
     var skillsLocation = 2180;
     var experienceLocation = 3150;
@@ -56,8 +64,8 @@
         for(var i in stopPoints){
           console.log("other flag:",stopPoints[i] > last > stopPoints[i],"prev:",prev,"last:",last);
           if(stopPoints[i] === last ||
-            (last > stopPoints[i] && (last - stopPoints[i]) < 30) ||
-            (last < stopPoints[i] && (stopPoints[i]- last) < 30)){
+            (last > stopPoints[i] && (last - stopPoints[i]) < 20) ||
+            (last < stopPoints[i] && (stopPoints[i]- last) < 20)){
             return stopPoints[i];
           }
         }
@@ -168,6 +176,14 @@
     $('.spects-box-front').css("transform","translate3d(0, 0, "+spectProjectLength+"px)");
     $('.project-spects').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
     $('.spects-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
+
+    //ajusting size of section dynamically
+    var screenHeight = 600;
+    if(window.innerHeight){
+      screenHeight = window.innerHeight;
+    };
+    $(".section-container").css("height",String(screenHeight));
+
 
   });
 
