@@ -4,28 +4,61 @@
 
     //ajusting size of section dynamically
     var screenHeight = 600;
-    if(window.innerHeight){
+    if(window.innerHeight && window.innerHeight >= 600){
       screenHeight = window.innerHeight;
     };
     $(".section-container").css("height",String(screenHeight));
 
+    // responsive box on the map menu
 
-    var portfolioLocation = 1440;
-    var skillsLocation = 2180;
-    var experienceLocation = 3150;
-    var contactLocation = 4070;
-    var stops = [];
-    stops.push(portfolioLocation);
-    stops.push(skillsLocation);
-    stops.push(experienceLocation);
-    stops.push(contactLocation);
+    var blueBoxSize = $('#box1').height();
+    $('.box .left-face').css('width',String(blueBoxSize));
+    $('.box .right-face').css('width',String(blueBoxSize));
+
+    var trans_size = blueBoxSize / 2;
+
+    $('.box').css('transform','translate3d(0, 0, -'+trans_size+'px)');
+    $('.right-face').css("transform","rotate3d( 0, 1, 0, 90deg ) translate3d(0, 0,"+trans_size+"px)");
+    $('.left-face').css("transform","rotate3d( 0, -1, 0, 90deg ) translate3d(0, 0,"+trans_size+"px)");
+    $('.link_map').css("transform","translate3d(0, 0,"+trans_size+"px)");
+    $('.bottom-face').css("transform","rotate3d( -1, 0, 0, 90deg )   translate3d(0, 0, "+trans_size+"px)");
+    $('.top-face').css("transform","rotate3d( 1, 0, 0, 90deg )   translate3d(0, -"+trans_size+"px,0)");
+    var box_long = $("#box1").width() - (blueBoxSize/2);
+    $('.right-face').css("transform","rotate3d( 0, 1, 0, 90deg ) translate3d(0, 0,"+box_long+"px)");
 
 
-    var scrollingStopFlag = true;
-    var previousScroll = window.scrollY;
+    // hover for map boxes
 
-  	var trans_size = $("#box1").width();
-  	trans_size = trans_size - 25;
+    $('.box').mouseenter(function(e){
+      var proObj = {
+        "-webkit-animation": "dribling .3s linear",
+        "-moz-animation":    "dribling .3s linear",
+        "-o-animation":      "dribling .3s linear",
+        "animation":         "dribling .3s linear",
+        "transform": "rotate3d( 1, 0, 0, 15deg)"
+      }
+      $(this).css(proObj);
+    })
+    .mouseleave(function(e){
+      var blueBoxSize = $('#box1').height();
+      var trans_size = blueBoxSize / 2;
+
+        var proObj = {
+        "-webkit-animation": "none",
+        "-moz-animation":    "none",
+        "-o-animation":      "none",
+        "animation":         "none",
+        "transform": 'translate3d(0, 0, -'+trans_size+'px)'
+      }
+
+      $(this).css(proObj);
+    });
+
+
+
+
+
+    // trans_size = trans_size - 25;
 
     $('#box2').on( "mouseenter", function(){
       $('#box3').css("z-index","3")
@@ -36,10 +69,9 @@
       $('#box3').css("z-index","4")
     } );
 
-		$('.right-face').css("transform","rotate3d( 0, 1, 0, 90deg ) translate3d(0, 0,"+trans_size+"px)");
-    $('.left-face').css("transform","rotate3d( 0, -1, 0, 90deg ) translate3d(0, 0, 25px)");
 
-  	var detailProjectLength = $('.project-detail').width()/2;
+
+    var detailProjectLength = $('.project-detail').width()/2;
 
     $('.detail-box-right').css("transform","rotate3D(0,1,0,-90deg) translate3d(" + detailProjectLength + "px, 0, 0)" );
     $('.detail-box-left').css("transform","rotate3d(0,1,0,90deg) translate3d(-" + detailProjectLength + "px, 0, 0)" );
@@ -58,6 +90,19 @@
     //*************************************************************
     // preparing the stick scroll stop for each section of the page
     //*************************************************************
+
+    var portfolioLocation = 1440;
+    var skillsLocation = 2180;
+    var experienceLocation = 3150;
+    var contactLocation = 4070;
+    var stops = [];
+    stops.push(portfolioLocation);
+    stops.push(skillsLocation);
+    stops.push(experienceLocation);
+    stops.push(contactLocation);
+
+    var scrollingStopFlag = true;
+    var previousScroll = window.scrollY;
 
     var stopIt = function(flag,prev,last,stopPoints){
       if(flag){
@@ -153,15 +198,31 @@
 
   $( window ).resize(function() {
 
+    //ajusting size of section dynamically
+     var screenHeight = 600;
+    if(window.innerHeight && window.innerHeight >= 600){
+      screenHeight = window.innerHeight;
+    };
+    $(".section-container").css("height",String(screenHeight));
 
-    var trans_size = $("#box1").width();
+    // map or inex resizing
 
-    trans_size = trans_size - 25;
+    var blueBoxSize = $('#box1').height();
+    $('.box .left-face').css('width',String(blueBoxSize));
+    $('.box .right-face').css('width',String(blueBoxSize));
 
+    var trans_size = blueBoxSize / 2;
+
+    $('.box').css('transform','translate3d(0, 0, -'+trans_size+'px)');
     $('.right-face').css("transform","rotate3d( 0, 1, 0, 90deg ) translate3d(0, 0,"+trans_size+"px)");
-    $('.left-face').css("transform","rotate3d( 0, -1, 0, 90deg ) translate3d(0, 0, 25px)");
+    $('.left-face').css("transform","rotate3d( 0, -1, 0, 90deg ) translate3d(0, 0,"+trans_size+"px)");
+    $('.link_map').css("transform","translate3d(0, 0,"+trans_size+"px)");
+    $('.bottom-face').css("transform","rotate3d( -1, 0, 0, 90deg )   translate3d(0, 0, "+trans_size+"px)");
+    $('.top-face').css("transform","rotate3d( 1, 0, 0, 90deg )   translate3d(0, -"+trans_size+"px,0)");
+    var box_long = $("#box1").width() - (blueBoxSize/2);
+    $('.right-face').css("transform","rotate3d( 0, 1, 0, 90deg ) translate3d(0, 0,"+box_long+"px)");
 
-    var detailProjectLength = $('.project-detail').width()/2;
+    // projects resizing
 
     $('.detail-box-right').css("transform","rotate3D(0,1,0,-90deg) translate3d(" + detailProjectLength + "px, 0, 0)" );
     $('.detail-box-left').css("transform","rotate3d(0,1,0,90deg) translate3d(-" + detailProjectLength + "px, 0, 0)" );
@@ -177,12 +238,7 @@
     $('.project-spects').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
     $('.spects-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
 
-    //ajusting size of section dynamically
-    var screenHeight = 600;
-    if(window.innerHeight){
-      screenHeight = window.innerHeight;
-    };
-    $(".section-container").css("height",String(screenHeight));
+
 
 
   });
