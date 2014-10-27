@@ -55,11 +55,6 @@
     });
 
 
-
-
-
-    // trans_size = trans_size - 25;
-
     $('#box2').on( "mouseenter", function(){
       $('#box3').css("z-index","3")
       $('#box2').css("z-index","4");
@@ -69,23 +64,33 @@
       $('#box3').css("z-index","4")
     } );
 
+    // initializing slider dimensions
+
+    var spectProjectHeigth = $('.main-port-box').height()/2;
+
+    $('.main-box-top').css("transform","rotate3d( 1, 0, 0, 90deg) translate3d(0,0,"+spectProjectHeigth+"px)");
+    $('.main-box-bottom').css("transform","rotate3d( -1, 0, 0, 90deg) translate3d(0,0,"+spectProjectHeigth+"px)");
 
 
-    var detailProjectLength = $('.project-detail').width()/2;
+    $('.main-port-box').css("transform","translate3d(0,0,-"+spectProjectHeigth+"px)" );
+    $('.main-box-back').css("transform","rotate3d( 0, 1, 0, 180deg) rotate3d(0, 0, 1, 180deg) translate3d(0,0,"+spectProjectHeigth+"px)");
+    $('.main-box-front').css("transform","translate3d(0,0,"+spectProjectHeigth+"px)");
 
-    $('.detail-box-right').css("transform","rotate3D(0,1,0,-90deg) translate3d(" + detailProjectLength + "px, 0, 0)" );
-    $('.detail-box-left').css("transform","rotate3d(0,1,0,90deg) translate3d(-" + detailProjectLength + "px, 0, 0)" );
-    $('.detail-box-front').css("transform","translate3d(0, 0, "+detailProjectLength+"px)");
-    $('.project-detail').css("transform","translate3d(0, 0, -"+detailProjectLength+"px)");
-    $('.detail-box-back').css("transform","translate3d(0, 0, -"+detailProjectLength+"px)");
-
+    // project detail styling
     var spectProjectLength = $('.project-detail').width()/2;
 
-    $('.spects-box-right').css("transform","rotate3D(0,1,0,-90deg) translate3d(" + spectProjectLength + "px, 0, 0)" );
-    $('.spects-box-left').css("transform","rotate3d(0,1,0,90deg) translate3d(-" + spectProjectLength + "px, 0, 0)" );
+    $('.detail-box-right').css("transform","rotate3D(0,1,0,90deg) translate3d(" + spectProjectLength + "px, 0, 0)" );
+    $('.detail-box-left').css("transform","rotate3d(0,-1,0,90deg) translate3d(-" + spectProjectLength + "px, 0, 0)" );
+    $('.detail-box-front').css("transform","translate3d(0, 0, "+spectProjectLength+"px)");
+    $('.project-detail').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
+    $('.detail-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px) rotate3d(0,1,0,180deg)");
+
+
+    $('.spects-box-right').css("transform","rotate3D(0,1,0,90deg) translate3d(" + spectProjectLength + "px, 0, 0)" );
+    $('.spects-box-left').css("transform","rotate3d(0,-1,0,90deg) translate3d(-" + spectProjectLength + "px, 0, 0)" );
     $('.spects-box-front').css("transform","translate3d(0, 0, "+spectProjectLength+"px)");
     $('.project-spects').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
-    $('.spects-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
+    $('.spects-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px) rotate3d(0,1,0,180deg)");
 
     //*************************************************************
     // preparing the stick scroll stop for each section of the page
@@ -222,15 +227,27 @@
     var box_long = $("#box1").width() - (blueBoxSize/2);
     $('.right-face').css("transform","rotate3d( 0, 1, 0, 90deg ) translate3d(0, 0,"+box_long+"px)");
 
-    // projects resizing
+    // adjusting slider dimensions
 
-    $('.detail-box-right').css("transform","rotate3D(0,1,0,-90deg) translate3d(" + detailProjectLength + "px, 0, 0)" );
-    $('.detail-box-left').css("transform","rotate3d(0,1,0,90deg) translate3d(-" + detailProjectLength + "px, 0, 0)" );
-    $('.detail-box-front').css("transform","translate3d(0, 0, "+detailProjectLength+"px)");
-    $('.project-detail').css("transform","translate3d(0, 0, -"+detailProjectLength+"px)");
-    $('.detail-box-back').css("transform","translate3d(0, 0, -"+detailProjectLength+"px)");
+    var spectProjectHeigth = $('.main-port-box').height()/2;
 
+    $('.main-box-top').css("transform","rotate3d( 1, 0, 0, 90deg) translate3d(0,0,"+spectProjectHeigth+"px)");
+    $('.main-box-bottom').css("transform","rotate3d( -1, 0, 0, 90deg) translate3d(0,0,"+spectProjectHeigth+"px)");
+
+
+    $('.main-port-box').css("transform","translate3d(0,0,-"+spectProjectHeigth+"px)" );
+    $('.main-box-back').css("transform","rotate3d( 0, 1, 0, 180deg) translate3d(0,0,"+spectProjectHeigth+"px)");
+    $('.main-box-front').css("transform","translate3d(0,0,"+spectProjectHeigth+"px)");
+
+    // adjusting project detail
     var spectProjectLength = $('.project-detail').width()/2;
+
+    $('.detail-box-right').css("transform","rotate3D(0,1,0,-90deg) translate3d(" + spectProjectLength + "px, 0, 0)" );
+    $('.detail-box-left').css("transform","rotate3d(0,1,0,90deg) translate3d(-" + spectProjectLength + "px, 0, 0)" );
+    $('.detail-box-front').css("transform","translate3d(0, 0, "+spectProjectLength+"px)");
+    $('.project-detail').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
+    $('.detail-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
+
 
     $('.spects-box-right').css("transform","rotate3D(0,1,0,-90deg) translate3d(" + spectProjectLength + "px, 0, 0)" );
     $('.spects-box-left').css("transform","rotate3d(0,1,0,90deg) translate3d(-" + spectProjectLength + "px, 0, 0)" );
