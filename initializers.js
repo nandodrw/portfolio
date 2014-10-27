@@ -242,19 +242,18 @@
     // adjusting project detail
     var spectProjectLength = $('.project-detail').width()/2;
 
-    $('.detail-box-right').css("transform","rotate3D(0,1,0,-90deg) translate3d(" + spectProjectLength + "px, 0, 0)" );
-    $('.detail-box-left').css("transform","rotate3d(0,1,0,90deg) translate3d(-" + spectProjectLength + "px, 0, 0)" );
+    $('.detail-box-right').css("transform","rotate3D(0,1,0,90deg) translate3d(" + spectProjectLength + "px, 0, 0)" );
+    $('.detail-box-left').css("transform","rotate3d(0,-1,0,90deg) translate3d(-" + spectProjectLength + "px, 0, 0)" );
     $('.detail-box-front').css("transform","translate3d(0, 0, "+spectProjectLength+"px)");
     $('.project-detail').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
-    $('.detail-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
+    $('.detail-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px) rotate3d(0,1,0,180deg)");
 
 
-    $('.spects-box-right').css("transform","rotate3D(0,1,0,-90deg) translate3d(" + spectProjectLength + "px, 0, 0)" );
-    $('.spects-box-left').css("transform","rotate3d(0,1,0,90deg) translate3d(-" + spectProjectLength + "px, 0, 0)" );
+    $('.spects-box-right').css("transform","rotate3D(0,1,0,90deg) translate3d(" + spectProjectLength + "px, 0, 0)" );
+    $('.spects-box-left').css("transform","rotate3d(0,-1,0,90deg) translate3d(-" + spectProjectLength + "px, 0, 0)" );
     $('.spects-box-front').css("transform","translate3d(0, 0, "+spectProjectLength+"px)");
     $('.project-spects').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
-    $('.spects-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
-
+    $('.spects-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px) rotate3d(0,1,0,180deg)");
 
 
 
