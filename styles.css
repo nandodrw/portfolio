@@ -398,7 +398,7 @@ section#portfolio {
   float:left;
   position:relative;
   z-index:3;
-  transition:transform 2s ease-out;
+  transition:transform 1s linear;
   cursor:pointer;
 }
 
@@ -447,14 +447,9 @@ section#portfolio {
   float:left;
   position:relative;
   z-index:3;
-  transition:transform 2s ease-out;
+  transition:transform .4s linear;
   cursor:pointer;
 }
-
-.project-detail:hover{
-  transform: rotate3d(0,0,1,90deg);
-}
-
 
 .detail-box-right{
 	position: absolute;
@@ -497,7 +492,7 @@ section#portfolio {
   float:left;
   postion:relative;
   z-index:2;
-  transition:transform 2s ease-out;
+  transition: transform .4s linear;
   cursor:pointer;
 }
 

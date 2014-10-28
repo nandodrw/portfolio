@@ -112,7 +112,7 @@
     var stopIt = function(flag,prev,last,stopPoints){
       if(flag){
         for(var i in stopPoints){
-          console.log("other flag:",stopPoints[i] > last > stopPoints[i],"prev:",prev,"last:",last);
+
           if(stopPoints[i] === last ||
             (last > stopPoints[i] && (last - stopPoints[i]) < 20) ||
             (last < stopPoints[i] && (stopPoints[i]- last) < 20)){
@@ -129,7 +129,7 @@
 
     document.addEventListener('mousewheel', function(e){
 
-        console.log("win position",window.scrollY);
+
         previousScroll = window.scrollY;
         var currentStop = stopIt(scrollingStopFlag,previousScroll,window.scrollY,stops);
         if (currentStop) {
@@ -146,7 +146,7 @@
 
     // document.attachEvent('onmousewheel', function(e){
 
-    //     console.log("win position",window.scrollY);
+    //
     //     previousScroll = window.scrollY;
     //     var currentStop = stopIt(scrollingStopFlag,previousScroll,window.scrollY,stops);
     //     if (currentStop) {
@@ -165,7 +165,7 @@
 
     // document.attachEvent('mousewheel', function(e){
 
-    //   console.log("win position",window.scrollY);
+    //
     //   previousScroll = window.scrollY;
     //   var currentStop = stopIt(scrollingStopFlag,previousScroll,window.scrollY,stops);
     //   if (currentStop) {
@@ -184,7 +184,7 @@
 
     document.addEventListener('DOMMouseScroll', function(e){
 
-      console.log("win position",window.scrollY);
+
         previousScroll = window.scrollY;
         var currentStop = stopIt(scrollingStopFlag,previousScroll,window.scrollY,stops);
         if (currentStop) {
@@ -197,7 +197,23 @@
         } else {
           scrollingStopFlag = true;
         }
-}, false);
+    }, false);
+
+    //*************************************************************
+    // function to rotate the slider
+    //*************************************************************
+
+    // function to rotate the main box
+
+    // Notes
+    // 3d matrix with 0 rotation:
+    // matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -245, 1)
+    // 3d matrix with 90 rotation:
+    // matrix3d(1, 0, 0, 0, 0, 6.12323399573677e-17, -1, 0, 0, 1, 6.12323399573677e-17, 0, 0, 0, -245, 1)
+    // 3d matrix with 180 rotation:
+    // matrix3d(1, 0, 0, 0, 0, -1, -1.22464679914735e-16, 0, 0, 1.22464679914735e-16, -1, 0, 0, 0, -245, 1)
+    // 3d matrix with 270 rotation:
+    // matrix3d(1, 0, 0, 0, 0, -1.83697019872103e-16, 1, 0, 0, -1, -1.83697019872103e-16, 0, 0, 0, -245, 1)
 
 	});
 
@@ -236,7 +252,7 @@
 
 
     $('.main-port-box').css("transform","translate3d(0,0,-"+spectProjectHeigth+"px)" );
-    $('.main-box-back').css("transform","rotate3d( 0, 1, 0, 180deg) translate3d(0,0,"+spectProjectHeigth+"px)");
+    $('.main-box-back').css("transform","rotate3d( 0, 1, 0, 180deg) rotate3d(0, 0, 1, 180deg) translate3d(0,0,"+spectProjectHeigth+"px)");
     $('.main-box-front').css("transform","translate3d(0,0,"+spectProjectHeigth+"px)");
 
     // adjusting project detail
