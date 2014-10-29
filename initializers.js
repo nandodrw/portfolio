@@ -92,6 +92,23 @@
     $('.project-spects').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
     $('.spects-box-back').css("transform","translate3d(0, 0, -"+spectProjectLength+"px) rotate3d(0,1,0,180deg)");
 
+    // initializing slider controller
+
+    // var switchBox = $('#box-sc1').height();
+    // $('.box-sc .left-face-sc').css('width',String(switchBox));
+    // $('.box-sc .right-face-sc').css('width',String(switchBox));
+
+    // var switchBoxHalf = switchBox / 2;
+
+    // $('.box-sc').css('transform','translate3d(0, 0, -'+switchBoxHalf+'px)');
+    // $('.right-face-sc').css("transform","rotate3d( 0, 1, 0, 90deg ) translate3d(0, 0,"+switchBoxHalf+"px)");
+    // $('.left-face-sc').css("transform","rotate3d( 0, -1, 0, 90deg ) translate3d(0, 0,"+switchBoxHalf+"px)");
+    // $('.front-face-sc').css("transform","translate3d(0, 0,"+switchBoxHalf+"px)");
+    // $('.bottom-face-sc').css("transform","rotate3d( -1, 0, 0, 90deg )   translate3d(0, 0, "+switchBoxHalf+"px)");
+    // $('.top-face-sc').css("transform","rotate3d( 1, 0, 0, 90deg )   translate3d(0, -"+switchBoxHalf+"px,0)");
+    // var box_long = $("#box-sc1").width() - (switchBox/2);
+    // $('.right-face-sc').css("transform","rotate3d( 0, 1, 0, 90deg ) translate3d(0, 0,"+box_long+"px)");
+
     //*************************************************************
     // preparing the stick scroll stop for each section of the page
     //*************************************************************
