@@ -95,7 +95,7 @@ section h2{
 
 
 .header_container{
-	background-image: url("images/smoke.jpg");
+	background-image: url("../images/smoke.jpg");
 	background-repeat: no-repeat;
 	background-size: cover;
 	height: 100%;
@@ -168,7 +168,7 @@ section#map {
 	height: 90%;
 	width: 61.8%;
 	float: left;
-	background-image:url("images/me.jpeg");
+	background-image:url("../images/me.jpeg");
 	border-top-right-radius:4px;
 
 }
