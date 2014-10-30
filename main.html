@@ -99,25 +99,25 @@
 				<div class="portfolio-container">
 				  <div class="main-port-box">
 
-				    <div class="main-box-top"><h1>2</h1></div>
-				    <div class="main-box-front"><h1>1</h1></div>
-				    <div class="main-box-bottom"><h1>3</h1></div>
-				    <div class="main-box-back"><h1>4</h1></div>
+				    <div class="main-box-top"><h1></h1></div>
+				    <div class="main-box-front"><h1></h1></div>
+				    <div class="main-box-bottom"><h1></h1></div>
+				    <div class="main-box-back"><h1></h1></div>
 
 				  </div>
 
 				  <div class="behind-scenes">
 				    <div class="project-detail">
-							<div class="detail-box-right"><h1>1</h1></div>
-				    	<div class="detail-box-front"><h1>2</h1></div>
-				    	<div class="detail-box-left"><h1>3</h1></div>
-				    	<div class="detail-box-back"><h1>4</h1></div>
+							<div class="detail-box-right"><h1></h1></div>
+				    	<div class="detail-box-front"><h1></h1></div>
+				    	<div class="detail-box-left"><h1></h1></div>
+				    	<div class="detail-box-back"><h1></h1></div>
 				    </div>
 				    <div class="project-spects">
-							<div class="spects-box-right"><h1>1</h1></div>
-				    	<div class="spects-box-front"><h1>2</h1></div>
-				    	<div class="spects-box-left"><h1>3</h1></div>
-				    	<div class="spects-box-back"><h1>4</h1></div>
+							<div class="spects-box-right"><h1></h1></div>
+				    	<div class="spects-box-front"><h1></h1></div>
+				    	<div class="spects-box-left"><h1></h1></div>
+				    	<div class="spects-box-back"><h1></h1></div>
 				    </div>
 				</div>
 
@@ -186,7 +186,66 @@
 		</section	>
 		<footer></footer>
 	</section>
+
+
+
 </body>
+	<script src="scripts/jquery.loadTemplate.min.js"></script>
 	<script src="scripts/initializers.js"></script>
 	<script src="scripts/slider.js"></script>
+
+	<script type="text/html" id="project-main-view-template">
+		<div class="project-photo-container" data-class="class">
+			<div class="photo-cover">
+				<div class="proname" data-content="name"></div>
+			</div>
+		</div>
+	</script>
+
+	<script type="text/html" id="projects-description-template">
+    <div class="project-description-container" data-class="class">
+			<h2 data-content="name"></h2>
+			<h3>Description</h3>
+			<p data-content="description"></p>
+			<h3>Type</h3>
+			<p data-content="type"></p>
+			<h3>Position</h3>
+			<p data-content="position"></p>
+		</div>
+	</script>
+
+	<script type="text/html" id="project-spects-template">
+    <div class="project-spects-container" data-class="class">
+			<h3>Technologies</h3>
+			<div data-class="class" class="technologies-container"></h2>
+		</div>
+	</script>
+
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

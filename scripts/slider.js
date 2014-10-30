@@ -9,7 +9,73 @@
     // function to rotate the main box
 
 
+    console.log("what is this",this);
 
+    var projectInfo  = {
+        1 : {
+            class : "p1",
+            name : "Start Mining",
+            description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, iusto. Perspiciatis voluptates earum id unde temporibus rerum, aut eveniet enim illo, fugiat voluptatem accusantium maxime mollitia, dolores officiis sequi eos.",
+            type : "Open Source",
+            position : "Front End Developer",
+            technologies : ["Angular.js","Firebase","Bootstrap"]
+        },
+
+        2 : {
+            class : "p2",
+            name : "Sora",
+            description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatum omnis alias totam, veniam nam soluta nesciunt repudiandae reiciendis necessitatibus rem eum, cum quia voluptas exercitationem fugiat molestias aliquam. Alias.",
+            type : "Open Source",
+            position : "Front End Developer",
+            technologies : ["Angular.js","Firebase","CSS3"]
+        },
+
+        3 : {
+            class : "p3",
+            name : "Octolog",
+            description :"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nisi, cum suscipit, vitae provident eos dolorum ad. Ullam non blanditiis commodi, eaque provident mollitia doloremque iste aliquam similique, a perspiciatis!",
+            type :"Open Source",
+            position :"JavaScript Developer",
+            technologies : ["Angular.js","Node.js","Node-Webkit","NedDB"]
+        },
+
+        4 : {
+            class : "p4",
+            name : "ng-chat",
+            description : ",Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nulla minima expedita iusto. Ut quam maiores officia dolorum repudiandae quae obcaecati. Ipsam, rerum optio quam vel asperiores aperiam ad animi!",
+            type : "Open Source",
+            position : "JavaScript/Front-End Developer",
+            technologies :["Angular.js","Firebase","CSS3"]
+        },
+
+        5 : {
+            class : "p5",
+            name : "This Portfolio",
+            description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt qui doloribus itaque enim deserunt accusantium et, sed sit, quos natus harum consectetur explicabo, a velit! Aspernatur placeat incidunt non tempora.",
+            type : "Personal Portfolio",
+            position : "Front End Developer",
+            technologies : ["CSS3","HTML5","JQuery","Modernizr"]
+        },
+
+        6 : {
+            class : "p6",
+            name : "Startup Ranking",
+            description :",Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque vitae illo culpa aliquam dolore distinctio commodi, soluta. Excepturi cumque quasi, molestiae facere, eaque modi temporibus autem doloribus voluptate dolores sunt.",
+            type : "Web Portal",
+            position :"Front End Developer",
+            technologies : ["CSS3","HTML5"]
+        },
+
+        7 : {
+            class : "p7",
+            name : "CSS Design",
+            description :"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quod, doloremque rem vel impedit ab ipsa reprehenderit laudantium accusantium recusandae aperiam sint omnis doloribus, porro est nisi voluptatem molestias voluptatibus!",
+            type : "Open Source",
+            position : "Front End Developer",
+            technologies :["CSS3","HTML5","JQuery"]
+        }
+
+    }
 
     var sliderFunctions = {
 
@@ -223,13 +289,17 @@
                   setTimeout(function(){
                     slider.rotateSliderToFace(targetFace);
                     sliderFunctions.flagSlider = true;
-                  });
+                  },700);
                 }
             } else {
               sliderFunctions.updateProjectFace(projectNum);
               this.rotateSliderToFace(targetFace);
               sliderFunctions.flagSlider = true;
             }
+        },
+
+        getCurrentFace : function() {
+            return sliderFunctions.currentFace;
         }
     }
 
@@ -237,19 +307,47 @@
 
     // initializing slider controller
 
-    $(".switch").bind("click",function(){
-      if(sliderFunctions.flagSlider){
-        var that = this;
-        $('.switch').each(function(){
-          if($(this).index() != $(that).index() && !$(this).hasClass("on")){
-            $(this).toggleClass("on");
+    $(document).ready(function(){
+      $(".switch").bind("click",function(){
+        if(sliderFunctions.flagSlider){
+          var that = this;
+          $('.switch').each(function(){
+            if($(this).index() != $(that).index() && !$(this).hasClass("on")){
+              $(this).toggleClass("on");
+            }
+          });
+          if($(this).hasClass("on")){
+            $(this).removeClass("on");
+            slider.showProject($(this).index()+1);
           }
-        });
-        if($(this).hasClass("on")){
-          $(this).removeClass("on");
-          slider.showProject($(this).index()+1);
         }
-      }
+      });
+
+      sliderFunctions.face1 = {
+        main : $('.main-port-box .main-box-front'),
+        detail : $('.project-detail .detail-box-front'),
+        spect : $('.project-detail .detail-box-front')
+      };
+
+      sliderFunctions.face2 = {
+        main : $('.main-port-box .main-box-top'),
+        detail : $('.project-detail .detail-box-left'),
+        spect : $('.project-detail .spects-box-right')
+      };
+
+      sliderFunctions.face3 = {
+        main : $('.main-port-box .main-box-back'),
+        detail : $('.project-detail .detail-box-back'),
+        spect : $('.project-detail .spects-box-back')
+      };
+
+      sliderFunctions.face4 = {
+        main : $('.main-port-box .main-box-bottom'),
+        detail : $('.project-detail .spects-box-right'),
+        spect : $('.project-detail .spects-box-left')
+      };
+
     });
+
 
 })();
