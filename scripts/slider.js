@@ -263,7 +263,8 @@
         },
 
         updateProjectFace : function(face,project) {
-            console.log("face",face,'project',project,"damm",this["face" + face]);
+          console.log("face",face,"project",project);
+            // console.log("face",face,'project',project,"damm",this["face" + face]);
             this["face" + face].main.empty();
             this["face" + face].detail.empty();
             this["face" + face].spect.empty();
@@ -286,6 +287,17 @@
             {
                 class:projectInfo[project-1].class
             });
+        },
+
+        updateButtonsStyles : function(projectNum){
+          $('.switch.proj').each(function(){
+              if($(this).attr("id") != projectNum){
+                if(!$(this).hasClass("ready")){
+                  $(this).toggleClass("ready");
+                }
+              }
+          });
+          $("#p"+projectNum).removeClass("ready");
         }
     }
 
@@ -307,10 +319,12 @@
                   setTimeout(function(){
                     slider.rotateSliderToFace(targetFace);
                     sliderFunctions.updateProjectFace(targetFace,projectNum);
+                    sliderFunctions.updateButtonsStyles(projectNum);
                     sliderFunctions.flagSlider = true;
                   },700);
                 } else {
                   this.rotateSliderToFace(targetFace - 1);
+                  sliderFunctions.updateButtonsStyles(projectNum);
                   sliderFunctions.updateProjectFace(targetFace,projectNum);
                   setTimeout(function(){
                     slider.rotateSliderToFace(targetFace);
@@ -318,6 +332,7 @@
                   },700);
                 }
             } else {
+              sliderFunctions.updateButtonsStyles(projectNum);
               sliderFunctions.updateProjectFace(targetFace,projectNum);
               this.rotateSliderToFace(targetFace);
               sliderFunctions.flagSlider = true;
@@ -340,7 +355,14 @@
           }
         },
 
-        play : function(delay) {
+        play : function(delay,immidiateChange) {
+
+          if(sliderFunctions.timeOutReference){
+            slider.pause();
+          }
+          if(immidiateChange){
+            slider.showNextProject();
+          }
           sliderFunctions.timeOutReference = setInterval(function() {
             slider.showNextProject();
           }, delay);
@@ -360,33 +382,48 @@
       // logic for switch buttons in controllers
 
       $(".switch.proj").bind("click",function(){
+
         if(sliderFunctions.flagSlider){
           var that = this;
-          $('.switch.proj').each(function(){
-            if($(this).index() != $(that).index() && !$(this).hasClass("on")){
-              $(this).toggleClass("on");
+          if($(this).hasClass("ready")){
+            if(sliderFunctions.timeOutReference){
+              slider.pause();
             }
-          });
-          if($(this).hasClass("on")){
-            $(this).removeClass("on");
             slider.showProject($(this).index()+1);
+            if($(".switch.ctr.pause").hasClass("ready")){
+              slider.play(2000,false);
+            }
           }
         }
+
+        // if(sliderFunctions.flagSlider){
+        //   var that = this;
+        //   $('.switch.proj').each(function(){
+        //     if($(this).index() != $(that).index() && !$(this).hasClass("ready")){
+        //       $(this).toggleClass("ready");
+        //     }
+        //   });
+        //   if($(this).hasClass("ready")){
+        //     $(this).removeClass("ready");
+        //     slider.showProject($(this).index()+1);
+        //   }
+        // }
+
       });
 
       // logic to play/stop the slider
 
       $(".switch.ctr").bind("click",function(){
 
-        if($(this).hasClass("on")){
-          $(this).removeClass("on");
+        if($(this).hasClass("ready")){
+          $(this).removeClass("ready");
 
           if($(this).hasClass("play")){
-            $(".switch.ctr.pause").toggleClass("on");
-            slider.pause();
+            $(".switch.ctr.pause").toggleClass("ready");
+            slider.play(2000,true);
           } else {
-            $(".switch.ctr.play").toggleClass("on");
-            slider.play(2000);
+            $(".switch.ctr.play").toggleClass("ready");
+            slider.pause();
           }
         }
       });
@@ -417,8 +454,11 @@
         spect : $('.project-spects .spects-box-left')
       };
 
+      //initializing slider
+
+      slider.play(2000,true);
+
     });
 
-    slider.play(2000);
 
 })();
