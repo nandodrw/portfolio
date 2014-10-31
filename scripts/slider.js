@@ -11,8 +11,8 @@
 
     console.log("what is this",this);
 
-    var projectInfo  = {
-        1 : {
+    var projectInfo  = [
+        {
             class : "p1",
             name : "Start Mining",
             description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, iusto. Perspiciatis voluptates earum id unde temporibus rerum, aut eveniet enim illo, fugiat voluptatem accusantium maxime mollitia, dolores officiis sequi eos.",
@@ -21,7 +21,7 @@
             technologies : ["Angular.js","Firebase","Bootstrap"]
         },
 
-        2 : {
+        {
             class : "p2",
             name : "Sora",
             description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatum omnis alias totam, veniam nam soluta nesciunt repudiandae reiciendis necessitatibus rem eum, cum quia voluptas exercitationem fugiat molestias aliquam. Alias.",
@@ -30,7 +30,7 @@
             technologies : ["Angular.js","Firebase","CSS3"]
         },
 
-        3 : {
+        {
             class : "p3",
             name : "Octolog",
             description :"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nisi, cum suscipit, vitae provident eos dolorum ad. Ullam non blanditiis commodi, eaque provident mollitia doloremque iste aliquam similique, a perspiciatis!",
@@ -39,7 +39,7 @@
             technologies : ["Angular.js","Node.js","Node-Webkit","NedDB"]
         },
 
-        4 : {
+        {
             class : "p4",
             name : "ng-chat",
             description : ",Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nulla minima expedita iusto. Ut quam maiores officia dolorum repudiandae quae obcaecati. Ipsam, rerum optio quam vel asperiores aperiam ad animi!",
@@ -48,7 +48,7 @@
             technologies :["Angular.js","Firebase","CSS3"]
         },
 
-        5 : {
+        {
             class : "p5",
             name : "This Portfolio",
             description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt qui doloribus itaque enim deserunt accusantium et, sed sit, quos natus harum consectetur explicabo, a velit! Aspernatur placeat incidunt non tempora.",
@@ -57,7 +57,7 @@
             technologies : ["CSS3","HTML5","JQuery","Modernizr"]
         },
 
-        6 : {
+        {
             class : "p6",
             name : "Startup Ranking",
             description :",Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque vitae illo culpa aliquam dolore distinctio commodi, soluta. Excepturi cumque quasi, molestiae facere, eaque modi temporibus autem doloribus voluptate dolores sunt.",
@@ -66,7 +66,7 @@
             technologies : ["CSS3","HTML5"]
         },
 
-        7 : {
+        {
             class : "p7",
             name : "CSS Design",
             description :"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quod, doloremque rem vel impedit ab ipsa reprehenderit laudantium accusantium recusandae aperiam sint omnis doloribus, porro est nisi voluptatem molestias voluptatibus!",
@@ -75,11 +75,15 @@
             technologies :["CSS3","HTML5","JQuery"]
         }
 
-    }
+    ];
 
     var sliderFunctions = {
 
+        timeOutReference : undefined,
+
         currentFace : 1,
+
+        currentProject : 1,
 
         flagSlider : true,
 
@@ -266,21 +270,21 @@
 
             this["face" + face].main.loadTemplate($("#project-main-view-template"),
             {
-                class:projectInfo[project].class,
-                name:projectInfo[project].name
+                class:projectInfo[project-1].class,
+                name:projectInfo[project-1].name
             });
 
             this["face" + face].detail.loadTemplate($("#projects-description-template"),
             {
-                class:projectInfo[project].class,
-                name:projectInfo[project].name,
-                description:projectInfo[project].description,
-                type:projectInfo[project].type,
-                position:projectInfo[project].position
+                class:projectInfo[project-1].class,
+                name:projectInfo[project-1].name,
+                description:projectInfo[project-1].description,
+                type:projectInfo[project-1].type,
+                position:projectInfo[project-1].position
             });
             this["face" + face].spect.loadTemplate($("#project-spects-template"),
             {
-                class:projectInfo[project].class
+                class:projectInfo[project-1].class
             });
         }
     }
@@ -318,10 +322,32 @@
               this.rotateSliderToFace(targetFace);
               sliderFunctions.flagSlider = true;
             }
+            sliderFunctions.currentProject = projectNum;
         },
 
         getCurrentFace : function() {
             return sliderFunctions.currentFace;
+        },
+
+        showNextProject : function() {
+
+          var limit = projectInfo.length;
+
+          if(sliderFunctions.currentProject != limit){
+            this.showProject(sliderFunctions.currentProject + 1);
+          } else {
+            this.showProject(1);
+          }
+        },
+
+        play : function(delay) {
+          sliderFunctions.timeOutReference = setInterval(function() {
+            slider.showNextProject();
+          }, delay);
+        },
+
+        pause : function() {
+          clearInterval(sliderFunctions.timeOutReference);
         }
     }
 
@@ -357,8 +383,10 @@
 
           if($(this).hasClass("play")){
             $(".switch.ctr.pause").toggleClass("on");
+            slider.pause();
           } else {
             $(".switch.ctr.play").toggleClass("on");
+            slider.play(2000);
           }
         }
       });
@@ -391,5 +419,6 @@
 
     });
 
+    slider.play(2000);
 
 })();
