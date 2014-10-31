@@ -564,7 +564,7 @@ background-image: linear-gradient(90deg, #796c62, #cec8c2 0%, #e2ddd9 1.3%, #f5f
 
 .switch {
   float: left;
-  width: 14%;
+  width: 10.5%;
   margin: 0 .1%;
   height: 100%;
   background-image: -webkit-gradient(linear, 0 0, 0 119, color-stop(0.016, #e9e2df), color-stop(0.949, #d1c3bb), to(#b4a69f));
@@ -648,7 +648,18 @@ body {
   position: relative;
 }
 
+.move-ctr-container {
+  width: 10%;
+  height: 100%;
+  padding-left: 4%;
+  padding-right: 1.78%;
+  float: left;
+}
 
+.move-ctr-container .switch{
+  width: 48%;
+  float: left;
+}
 
 /*****************************************************/
 /**************      knowledge        ****************/

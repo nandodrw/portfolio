@@ -258,8 +258,30 @@
           return 4;
         },
 
-        updateProjectFace : function(){
+        updateProjectFace : function(face,project) {
+            console.log("face",face,'project',project,"damm",this["face" + face]);
+            this["face" + face].main.empty();
+            this["face" + face].detail.empty();
+            this["face" + face].spect.empty();
 
+            this["face" + face].main.loadTemplate($("#project-main-view-template"),
+            {
+                class:projectInfo[project].class,
+                name:projectInfo[project].name
+            });
+
+            this["face" + face].detail.loadTemplate($("#projects-description-template"),
+            {
+                class:projectInfo[project].class,
+                name:projectInfo[project].name,
+                description:projectInfo[project].description,
+                type:projectInfo[project].type,
+                position:projectInfo[project].position
+            });
+            this["face" + face].spect.loadTemplate($("#project-spects-template"),
+            {
+                class:projectInfo[project].class
+            });
         }
     }
 
@@ -280,19 +302,19 @@
                   this.rotateSliderToFace(3);
                   setTimeout(function(){
                     slider.rotateSliderToFace(targetFace);
-                    sliderFunctions.updateProjectFace(projectNum);
+                    sliderFunctions.updateProjectFace(targetFace,projectNum);
                     sliderFunctions.flagSlider = true;
                   },700);
                 } else {
                   this.rotateSliderToFace(targetFace - 1);
-                  sliderFunctions.updateProjectFace(projectNum);
+                  sliderFunctions.updateProjectFace(targetFace,projectNum);
                   setTimeout(function(){
                     slider.rotateSliderToFace(targetFace);
                     sliderFunctions.flagSlider = true;
                   },700);
                 }
             } else {
-              sliderFunctions.updateProjectFace(projectNum);
+              sliderFunctions.updateProjectFace(targetFace,projectNum);
               this.rotateSliderToFace(targetFace);
               sliderFunctions.flagSlider = true;
             }
@@ -308,10 +330,13 @@
     // initializing slider controller
 
     $(document).ready(function(){
-      $(".switch").bind("click",function(){
+
+      // logic for switch buttons in controllers
+
+      $(".switch.proj").bind("click",function(){
         if(sliderFunctions.flagSlider){
           var that = this;
-          $('.switch').each(function(){
+          $('.switch.proj').each(function(){
             if($(this).index() != $(that).index() && !$(this).hasClass("on")){
               $(this).toggleClass("on");
             }
@@ -323,28 +348,45 @@
         }
       });
 
+      // logic to play/stop the slider
+
+      $(".switch.ctr").bind("click",function(){
+
+        if($(this).hasClass("on")){
+          $(this).removeClass("on");
+
+          if($(this).hasClass("play")){
+            $(".switch.ctr.pause").toggleClass("on");
+          } else {
+            $(".switch.ctr.play").toggleClass("on");
+          }
+        }
+      });
+
+      // inicializing references to slider's DOM elemments
+
       sliderFunctions.face1 = {
         main : $('.main-port-box .main-box-front'),
         detail : $('.project-detail .detail-box-front'),
-        spect : $('.project-detail .detail-box-front')
+        spect : $('.project-spects .spects-box-front')
       };
 
       sliderFunctions.face2 = {
         main : $('.main-port-box .main-box-top'),
         detail : $('.project-detail .detail-box-left'),
-        spect : $('.project-detail .spects-box-right')
+        spect : $('.project-spects .spects-box-right')
       };
 
       sliderFunctions.face3 = {
         main : $('.main-port-box .main-box-back'),
         detail : $('.project-detail .detail-box-back'),
-        spect : $('.project-detail .spects-box-back')
+        spect : $('.project-spects .spects-box-back')
       };
 
       sliderFunctions.face4 = {
         main : $('.main-port-box .main-box-bottom'),
-        detail : $('.project-detail .spects-box-right'),
-        spect : $('.project-detail .spects-box-left')
+        detail : $('.project-detail .detail-box-right'),
+        spect : $('.project-spects .spects-box-left')
       };
 
     });
