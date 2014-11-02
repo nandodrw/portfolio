@@ -113,7 +113,7 @@
     // preparing the stick scroll stop for each section of the page
     //*************************************************************
 
-    var portfolioLocation = 1440;
+    var portfolioLocation = 1040;
     var skillsLocation = 2180;
     var experienceLocation = 3150;
     var contactLocation = 4070;
