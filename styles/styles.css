@@ -61,6 +61,7 @@ p {
 
 .section-container{
 	width: 100%;
+  perspective: 1000px;
 }
 
 .border-box{
@@ -685,7 +686,56 @@ section#knowledge {
   width: 100%;
 }
 
+.know-container {
+  width: 75%;
+  height: 70%;
+  border-radius: 4px;
+  /*background-color: white;*/
+}
 
+.left-up{
+  position: absolute;
+  z-index: 2;
+  top:-15%;
+  left: -25%;
+  background-color: black;
+  transform: translate3D(0,0,-200px) scale3d(.5,.5,1);
+}
+
+.right-up{
+  position: absolute;
+  z-index: 2;
+  top:-15%;
+  right: -25%;
+  background-color: green;
+  transform: translate3D(0,0,-200px) scale3d(.5,.5,1);
+}
+
+.center{
+  position: absolute;
+  z-index: 3;
+  top:15%;
+  right: 12.5%;
+  background-color: white;
+}
+
+.left-donw{
+  position: absolute;
+  z-index: 2;
+  bottom:-15%;
+  left: -25%;
+  background-color: yellow;
+  transform: translate3D(0,0,-200px) scale3d(.5,.5,1);
+}
+
+.right-donw{
+  position: absolute;
+  z-index: 2;
+  bottom:-15%;
+  right: -25%;
+  background-color: orange;
+  transform: translate3D(0,0,-200px) scale3d(.5,.5,1);
+}
 
 /*****************************************************/
 /**************      experience        ****************/
