@@ -1,0 +1,12 @@
+{
+  "name": "fernandos-portfolio",
+  "version": "0.0.1",
+  "devDependencies": {
+    "grunt": "~0.4.1",
+    "grunt-contrib-watch": "^0.6.1"
+  },
+  "dependencies": {
+    "grunt-express": "^1.4.1",
+    "grunt-open": "^0.2.3"
+  }
+}

@@ -1,15 +1,15 @@
+
 (function(){
 
 
+    //*****************************************************
+    //**************    portfolio slider    ***************
+    //*****************************************************
 
-    //*************************************************************
     // function to rotate the slider
-    //*************************************************************
 
     // function to rotate the main box
 
-
-    console.log("what is this",this);
 
     var projectInfo  = [
         {
@@ -263,8 +263,7 @@
         },
 
         updateProjectFace : function(face,project) {
-          console.log("face",face,"project",project);
-            // console.log("face",face,'project',project,"damm",this["face" + face]);
+
             this["face" + face].main.empty();
             this["face" + face].detail.empty();
             this["face" + face].spect.empty();
@@ -460,5 +459,171 @@
 
     });
 
+  //*****************************************************
+  //**************    knowledge slider    ***************
+  //*****************************************************
+
+  Notes:
+  // var matrixVal =  "matrix3d(0.5, 0, 0, 0, 0, 0.5, 0, 0, 0, 0, 1, 0, 0, 0, -200, 1)"
+
+  var classes = ["left-up","right-up","center","left-donw","right-donw"];
+
+  var panelElements = [];
+
+  panelElements.push($("#software-ing.know-container"));
+  panelElements.push($("#design.know-container"));
+  panelElements.push($("#code.know-container"));
+  panelElements.push($("#soft.know-container"));
+  panelElements.push($("#finance.know-container"));
+
+  var panelStyles = [
+    // .left-up
+    {
+      "z-index": "2",
+      "transform": "translate3D(-33%,-17%,-200px) scale3d(.5,.5,1)"
+    },
+    // .right-up
+    {
+      "z-index": "2",
+      "transform": "translate3D(66.5%,-17%,-200px) scale3d(.5,.5,1)"
+    },
+    // .center
+    {
+      "z-index": "3",
+      "transform": "translate3D(16.5%,24.5%,0) scale3d(1,1,1)"
+    },
+    // .left-donw
+    {
+      "z-index": "2",
+      "transform": "translate3D(-33%,66.5%,-200px) scale3d(.5,.5,1)"
+    },
+    // .right-donw
+    {
+      "z-index": "2",
+      "transform": "translate3D(66.5%,67%,-200px) scale3d(.5,.5,1)"
+    }
+  ];
+
+  rotateArray = function(arr,direction){
+    var aux = [];
+    if(direction=="prev"){
+      aux.push(arr[0]);
+      arr =  arr.slice(1,arr.length).concat(aux);
+    } else {
+      aux.push(arr[arr.length -1]);
+      arr = aux.concat(arr.slice(0,arr.length -1));
+    }
+    return arr;
+  };
+
+  applyStylesPanels = function(elementsArr,stylesArr){
+    // console.log(elementsArr,stylesArr)
+    for(var i in elementsArr){
+      elementsArr[i].css(stylesArr[i]);
+    }
+  };
+
+  initializePanels = function(){
+    applyStylesPanels(panelElements,panelStyles);
+  };
+
+  changePanel = function(direction){
+    panelStyles = rotateArray(panelStyles,direction);
+    applyStylesPanels(panelElements,panelStyles);
+  };
+
+  goToSpecificPanel = function(panel){
+    var objectivePanel = -1;
+    switch(panel){
+      case "software-ing":
+        objectivePanel = 0;
+        break;
+      case "design":
+        objectivePanel = 1;
+        break;
+      case "code":
+        objectivePanel = 2;
+        break;
+      case "soft":
+        objectivePanel = 3;
+        break;
+      case "finance":
+        objectivePanel = 4;
+        break;
+    };
+    if(objectivePanel > -1){
+      while(true){
+        panelStyles = rotateArray(panelStyles);
+        if(panelStyles[objectivePanel]["z-index"] == "3"){
+          break;
+        }
+      }
+      applyStylesPanels(panelElements,panelStyles);
+    }
+  };
+
+  var knowSlider = {
+    changePanel : function(direction){
+      changePanel(direction);
+    },
+    goToSpecificPanel : function(panel){
+      goToSpecificPanel(panel);
+    },
+
+    timer : {},
+
+    changeState : function(){
+      if(this.timer){
+        clearInterval(this.timer);
+        this.timer = undefined;
+      } else {
+        window.knowSlider.changePanel();
+        this.timer = setInterval(function() {
+            window.knowSlider.changePanel();
+        },2000);
+      }
+    }
+
+  };
+  initializePanels();
+  window.knowSlider = knowSlider;
+
+  // initializing knowledge slider functions
+
+  $(document).ready(function(){
+
+    window.knowSlider.timer = setInterval(function() {
+            window.knowSlider.changePanel();
+    },2000);
+
+    $(".panel-stitcher").on("click",function(){
+      window.knowSlider.goToSpecificPanel($(this).attr("title"));
+    });
+
+    $(".panel-control").on("click",function(){
+      switch($(this).attr("title")){
+        case "prev":
+          window.knowSlider.changePanel("prev");
+          break;
+        case "change":
+          window.knowSlider.changeState();
+          break;
+        case "next":
+          window.knowSlider.changePanel("next");
+          break;
+      };
+    });
+
+  });
 
 })();
+
+
+
+
+
+
+
+
+
+
