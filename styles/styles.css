@@ -978,9 +978,7 @@ section#experience{
 }
 
 
-/*****************************************************/
-/**************      contact        ****************/
-/*****************************************************/
+
 
 section#contact{
 	position: absolute;
@@ -998,3 +996,37 @@ footer{
 
 
 /*specifict styles*/
+
+/*****************************************************/
+/**************      parallax        ****************/
+/*****************************************************/
+
+#blob-1,
+#blob-2,
+#blob-3,
+#blob-4,
+#blob-5,
+#blob-6,
+#blob-7,
+#blob-8,
+#blob-9 {
+  position: absolute;
+  display: none;
+  z-index: 0;
+}
+
+#blob-container {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 960px;
+  height: 3000px;
+  overflow: hidden;
+}
+
+.force-show {
+  display: block !important;
+}
+
+
+
