@@ -148,6 +148,9 @@
       }
     });
 
+    // parallax
+    $('#blob-container').css("width", $('body').css('width'));
+    $('#blob-container').css("height",$('body').css('height'));
   });
 
 })();

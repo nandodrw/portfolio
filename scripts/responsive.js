@@ -61,6 +61,10 @@
     var projectSpects = document.getElementsByClassName('project-spects')[0];
     projectSpects.style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -"+spectProjectLength+", 1)";
     // $('.project-spects').css("transform","translate3d(0, 0, -"+spectProjectLength+"px)");
+
+    // parallax
+    $('#blob-container').css("width", $('body').css('width'));
+    $('#blob-container').css("height",$('body').css('height'));
   });
 
 })();
