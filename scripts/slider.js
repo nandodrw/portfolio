@@ -14,66 +14,67 @@
 
         var projectInfo  = [
             {
-                class : "p1",
                 name : "Start Mining",
-                description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quasi, iusto. Perspiciatis voluptates earum id unde temporibus rerum, aut eveniet enim illo, fugiat voluptatem accusantium maxime mollitia, dolores officiis sequi eos.",
+                imgClass: "start-mining",
+                description : "Social media tool to discover popular content in Facebook.",
                 type : "Open Source",
-                position : "Front End Developer",
-                technologies : ["Angular.js","Firebase","Bootstrap"]
+                position : "Software Engineer"
             },
 
             {
-                class : "p2",
                 name : "Sora",
-                description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit voluptatum omnis alias totam, veniam nam soluta nesciunt repudiandae reiciendis necessitatibus rem eum, cum quia voluptas exercitationem fugiat molestias aliquam. Alias.",
+                imgClass: "start-mining",
+                description : "Social Network for girls graduated from college.",
                 type : "Open Source",
-                position : "Front End Developer",
-                technologies : ["Angular.js","Firebase","CSS3"]
+                position : "Software Engineer"
             },
 
             {
-                class : "p3",
                 name : "Octolog",
-                description :"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quisquam nisi, cum suscipit, vitae provident eos dolorum ad. Ullam non blanditiis commodi, eaque provident mollitia doloremque iste aliquam similique, a perspiciatis!",
-                type :"Open Source",
-                position :"JavaScript Developer",
-                technologies : ["Angular.js","Node.js","Node-Webkit","NedDB"]
-            },
-
-            {
-                class : "p4",
-                name : "ng-chat",
-                description : ",Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quod nulla minima expedita iusto. Ut quam maiores officia dolorum repudiandae quae obcaecati. Ipsam, rerum optio quam vel asperiores aperiam ad animi!",
+                imgClass: "start-mining",
+                description : "Desktop tool to record the learning process while developing a project on GitHub.",
                 type : "Open Source",
-                position : "JavaScript/Front-End Developer",
-                technologies :["Angular.js","Firebase","CSS3"]
+                position : "Software Engineer"
             },
 
             {
-                class : "p5",
-                name : "This Portfolio",
-                description : "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sunt qui doloribus itaque enim deserunt accusantium et, sed sit, quos natus harum consectetur explicabo, a velit! Aspernatur placeat incidunt non tempora.",
+                name : "MakerSquare",
+                imgClass: "start-mining",
+                description : "MakerSquare main marketing web portal.",
+                type : "Open Source",
+                position : "Software Engineer"
+            },
+
+            {
+                name : "Biia Lab",
+                imgClass: "start-mining",
+                description : "E-learning web platform.",
                 type : "Personal Portfolio",
-                position : "Front End Developer",
-                technologies : ["CSS3","HTML5","JQuery","Modernizr"]
+                position : "Software Engineer"
             },
 
             {
-                class : "p6",
                 name : "Startup Ranking",
-                description :",Lorem ipsum dolor sit amet, consectetur adipisicing elit. Neque vitae illo culpa aliquam dolore distinctio commodi, soluta. Excepturi cumque quasi, molestiae facere, eaque modi temporibus autem doloribus voluptate dolores sunt.",
+                imgClass: "start-mining",
+                description : "Startup that generates ranking of other startups around the world.",
                 type : "Web Portal",
-                position :"Front End Developer",
-                technologies : ["CSS3","HTML5"]
+                position : "UI Developer"
             },
 
             {
-                class : "p7",
-                name : "CSS Design",
-                description :"Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis quod, doloremque rem vel impedit ab ipsa reprehenderit laudantium accusantium recusandae aperiam sint omnis doloribus, porro est nisi voluptatem molestias voluptatibus!",
+                name : "This Portfolio",
+                imgClass: "start-mining",
+                description : "Personal marketing web portal.",
                 type : "Open Source",
-                position : "Front End Developer",
-                technologies :["CSS3","HTML5","JQuery"]
+                position : "Software Engineer"
+            },
+
+            {
+                name : "Coding Lessons",
+                imgClass: "start-mining",
+                description : "I Helped MakerSquare's student to develop code based academic projects.",
+                type : "Open Source",
+                position : "Software Engineer"
             }
 
         ];
@@ -286,24 +287,12 @@
                 this["face" + face].detail.empty();
                 this["face" + face].spect.empty();
 
-                this["face" + face].main.loadTemplate($("#project-main-view-template"),
-                {
-                    class:projectInfo[project-1].class,
-                    name:projectInfo[project-1].name
-                });
+                this["face" + face].main.loadTemplate($("#project-main-view-template"), projectInfo[project-1]);
 
-                this["face" + face].detail.loadTemplate($("#projects-description-template"),
-                {
-                    class:projectInfo[project-1].class,
-                    name:projectInfo[project-1].name,
-                    description:projectInfo[project-1].description,
-                    type:projectInfo[project-1].type,
-                    position:projectInfo[project-1].position
-                });
-                this["face" + face].spect.loadTemplate($("#project-spects-template"),
-                {
-                    class:projectInfo[project-1].class
-                });
+                this["face" + face].detail.loadTemplate($("#projects-description-template"), projectInfo[project-1]);
+
+                this["face" + face].spect.loadTemplate($("#project-spects-template-" + project), projectInfo[project-1]);
+
             },
 
             updateButtonsStyles : function(projectNum){

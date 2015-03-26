@@ -90,21 +90,21 @@
 
     //support for Mozilla
 
-    document.addEventListener('DOMMouseScroll', function(e){
+    // document.addEventListener('DOMMouseScroll', function(e){
 
 
-        previousScroll = window.scrollY;
-        var currentStop = stopIt(scrollingStopFlag,previousScroll,window.scrollY,stops);
-        if (currentStop) {
-          window.scrollTo(0,currentStop);
-          // e.stopPropagation();
-          e.preventDefault();
-          // e.cancelBubble = false;
-          return false;
-          setTimeout(function(){scrollingStopFlag = false;},1000);
-        } else {
-          scrollingStopFlag = true;
-        }
-    }, false);
+    //     previousScroll = window.scrollY;
+    //     var currentStop = stopIt(scrollingStopFlag,previousScroll,window.scrollY,stops);
+    //     if (currentStop) {
+    //       window.scrollTo(0,currentStop);
+    //       // e.stopPropagation();
+    //       e.preventDefault();
+    //       // e.cancelBubble = false;
+    //       return false;
+    //       setTimeout(function(){scrollingStopFlag = false;},1000);
+    //     } else {
+    //       scrollingStopFlag = true;
+    //     }
+    // }, false);
 
 })();

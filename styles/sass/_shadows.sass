@@ -1,0 +1,8 @@
+.rigth-paper-shadow
+  @include prefix(box-shadow, 0px 0 2px 4px darken($blueprint,10%))
+
+.card-shadow
+  @include prefix(box-shadow, "0px 0 1px 1px " + darken($ligth-gray, 30%) + ", 0px 20px 10px -10px " + darken($ligth-gray, 30%))
+
+.card-shadow-ligth
+  @include prefix(box-shadow, "0 0 0.5px 0.5px " + darken($ligth-gray, 20%) + ", 0px 10px 5px -5px " + darken($ligth-gray, 20%))

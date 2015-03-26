@@ -1,0 +1,348 @@
+@import sass/vars
+@import sass/mixins
+@import sass/reset
+@import sass/helpers
+@import sass/fonts
+@import sass/borders
+@import sass/backgrounds
+@import sass/containers
+@import sass/margins
+@import sass/paddings
+@import sass/shadows
+@import sass/dimensions
+@import sass/3d
+
+// ------
+// common
+// ------
+
+.border-box
+  width: 100%
+  height: 3%
+  float: left
+
+
+.main-title
+  font-size: 500%
+  text-shadow: $red-grid-solid 2px 2px 2.8px, $red-grid-solid -2px -2px 2.8px
+
+.sub-title
+  font-size: 200%
+  font-weight: 100
+  text-shadow: $red-grid-solid 1px 1px 2.8px, $red-grid-solid -1px -1px 2.8px
+  bottom: 12%
+
+.paper-card
+  background-color: $paper-card-color
+  border-radius: $small-radio
+
+.section-title
+  width: $golden-long
+  height: 7%
+  float: left
+
+// ------
+// Header
+// ------
+
+.header-box
+  height: 20%
+  width: $threeone-long
+  clear: both
+
+.map-main-box
+  height: 68%
+
+.photo
+  background-image: url("../images/me2.jpg")
+  background-size: cover
+
+.box
+  width: 25%
+  height: 100%
+  position: relative
+  float: left
+  transform-style: preserve-3d
+  cursor: pointer
+
+.top-face
+  background-color: darken($ligth-gray, 30%)
+  position: absolute
+  width: 100%
+  height: 100%
+  transform-origin: center top
+  backface-visibility: hidden
+
+.left-face
+  background-color: darken($ligth-gray, 40%)
+  height: 100%
+  position: absolute
+
+.right-face
+  background-color: darken($ligth-gray, 40%)
+  height: 100%
+  position: absolute
+
+.link_map
+  color: white
+  width: 100%
+  height: 100%
+  overflow: hidden
+  background-color: $green-1
+  font-size: 200%
+  position: absolute
+  transition: border .5s, margin .5s
+
+.link_map a
+  color: $blue-1
+  float: left
+  width: 100%
+  font-weight: 100
+
+
+.link_map:active
+  background-color: rgba(34, 102, 153, 1)
+
+
+.link_map:hover
+  background-color: lighten(rgba(208, 208, 37, 1), 10%)
+
+.fix-text
+  margin-top: 8px
+
+.bottom-face
+  background-color: darken($ligth-gray, 50%)
+  position: relative
+  width: 100%
+  height: 100%
+  backface-visibility: hidden
+
+
+#box1
+  z-index: 2
+
+
+#box2
+  z-index: 3
+
+
+#box3
+  z-index: 3
+
+
+#box4
+  z-index: 2
+
+=keyframes($name)
+  @-webkit-keyframes #{$name}
+    @content
+  @-moz-keyframes #{$name}
+    @content
+  @-ms-keyframes #{$name}
+    @content
+  @keyframes #{$name}
+    @content
+
++keyframes(dribling)
+  0%
+    transform: rotate3d( 0, 0, 0, 0 )
+  60%
+    transform: rotate3d( -1, 0, 0, 15deg ) translate3d(0, 0, 3px)
+  100%
+    transform: rotate3d( 1, 0, 0, 15deg ) translate3d(0, 0, 4.5px)
+
+// --------------------
+// Portfolio Container
+// --------------------
+
+.portfolio-container
+  height: 69%
+  width: 92%
+  margin-right: 4%
+  margin-left: 4%
+
+.main-port-box
+  transform-style: preserve-3d
+  width: $golden-long
+  position: relative
+  z-index: 3
+  transition: transform .7s ease
+  cursor: pointer
+
+// .main-box-top
+//   background-color: rgba(233, 78, 78, 0.65)
+
+// .main-box-front
+//   background-color: rgba(242, 146, 146, 0.65)
+
+// .main-box-bottom
+//   background-color: rgba(104, 13, 13, 0.65)
+
+// .main-box-back
+//   background-color: rgba(141, 17, 17, 0.65)
+
+.behind-scenes
+  width: $golden-short
+  z-index: 2
+
+.project-detail
+  transform-style: preserve-3d
+  height: $golden-long
+  z-index: 3
+  transition: transform .35s ease
+  cursor: pointer
+
+.detail-box-right
+  transform-origin: right center
+  // background-color: rgba(118, 141, 17, 0.65)
+
+// .detail-box-front
+//   background-color: rgba(194, 229, 42, 0.65)
+
+.detail-box-left
+  transform-origin: left center
+  // background-color: rgba(141, 168, 21, 0.65)
+
+// .detail-box-back
+//   background-color: rgba(237, 247, 191, 0.65)
+
+.project-spects
+  transform-style: preserve-3d
+  height: $golden-short
+  z-index: 2
+  transition: transform .4s linear
+  cursor: pointer
+
+
+.spects-box-right
+  transform-origin: right center
+
+// .spects-box-front
+//   background-color: rgba(14, 19, 113, 0.65)
+
+.spects-box-left
+  transform-origin: left center
+  // background-color: rgba(42, 51, 229, 0.65)
+
+// .spects-box-back
+//   background-color: rgba(132, 138, 240, 0.65)
+
+.slider-controller
+  height: 12%
+  width: 92%
+  margin-right: 4%
+  margin-left: 4%
+  box-shadow: inset 0 2px 0px 1px black
+
+.slider-controller:before
+  content: ""
+  position: absolute
+  left: -25px
+  top: -35px
+  width: 100%
+  height: 100%
+  z-index: -1
+  padding: 35px 25px
+  border-radius: 2px
+
+
+.switch
+  float: left
+  width: 10.5%
+  margin: 0 .1%
+  height: 100%
+  // background-image: linear-gradient(#e9e2df 1.6%, #d1c3bb 94.9%, #b4a69f)
+  box-shadow: inset 0 10px rgba(255,255,255,.7), inset 0 11px 1px rgba(250,250,250,.2), inset 0 -2px 1px rgba(0,0,0,.2)
+  border-radius: 2px
+  position: relative
+  z-index: 1
+
+.switch:before
+  content: ""
+  width: 36%
+  position: absolute
+  height: 4px
+  margin: 16px 32%
+  border-radius: 12px
+  box-shadow: inset 0 0 1px rgba(0,0,0,.2)
+  border: 1px solid rgba(0,0,0,.1)
+
+.switch:after
+  content: ""
+  position: absolute
+  top: 100%
+  left: 0
+  width: 100%
+  height: 20%
+  // background: linear-gradient(to bottom,  rgba(65,50,0,0.25) 0%,rgba(65,50,0,0.25) 1%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%)
+  border-radius: 2px
+
+.ready.switch
+  // background-image: linear-gradient(#fff 1.8%, #f7f6f5 1.8%, #eee6e2 99%, #f0ece8 99%, #f0ece8)
+  box-shadow: none
+  box-shadow: inset 0 -13px 2px rgba(255,255,255,1)
+
+.ready.switch:before
+  margin-top: 10px
+  background: orange
+  box-shadow: inset 0 1px rgba(255,255,255,.2), 0 0 2px orange
+
+.ready.switch:after
+  content: ""
+  position: absolute
+  top: 90%
+  left: 0
+  width: 100%
+  height: 50%
+  background: linear-gradient(to bottom,  rgba(65,50,0,0.3) 0%,rgba(65,50,0,0.3) 35%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%)
+  border-radius: 2px
+
+
+.move-ctr-container
+  width: 10%
+  height: 100%
+  padding-left: 4%
+  padding-right: 1.78%
+  float: left
+
+
+.move-ctr-container .switch
+  width: 48%
+  float: left
+
+.project-description-container
+  // background-color: $paper-card-color
+  color: $blue-1
+  // border: 1px solid $green-1
+  background-color: $green-1
+  .project-title
+    color: $paper-card-color
+    text-align: right
+    font-weight: 100
+    font-size: 2em
+  .project-desc-title
+    font-weight: 100
+    font-size: 1.2em
+  .project-data-info
+    font-weight: 200
+    font-size: 1em
+
+.project-technologies
+  background-color: $paper-card-color
+  color: $blue-1
+  border: 1px solid $green-1
+  .tittle
+    text-align: right
+    font-weight: 100
+    font-size: 1.2em
+
+
+
+
+
+
+
+
+
+
+
