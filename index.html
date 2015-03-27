@@ -117,12 +117,10 @@
 
 				<div class="portfolio-container left perspective-1">
 				  <div class="main-port-box full-height left">
-
 				    <div class="main-box-top abs-position full-size"><h1></h1></div>
 				    <div class="main-box-front abs-position full-size"><h1></h1></div>
 				    <div class="main-box-bottom abs-position full-size"><h1></h1></div>
 				    <div class="main-box-back abs-position full-size"><h1></h1></div>
-
 				  </div>
 
 				  <div class="behind-scenes rel-position full-height left">
@@ -145,7 +143,6 @@
 				<div class="border-box"></div>
 
 			  <div class="slider-controller left">
-
 					<div id="p1" class="switch proj"></div>
 				  <div id="p2"class="switch proj ready"></div>
 				  <div id="p3" class="switch proj ready"></div>
@@ -153,9 +150,10 @@
 				  <div id="p5" class="switch proj ready"></div>
 				  <div id="p6"class="switch proj ready"></div>
 				  <div id="p7"class="switch proj ready"></div>
-				  <div class="move-ctr-container">
-				  	<div class="switch ctr play">play</div>
-				  	<div class="switch ctr pause ready">pause</div>
+				  <div id="p8"class="switch proj ready"></div>
+				  <div class="move-ctr-container border-box-model left">
+				  	<div class="switch ctr play grunt logo-background"></div>
+				  	<div class="switch ctr pause ready"></div>
 				  </div>
 			  </div>
 
@@ -166,10 +164,20 @@
 		<section id="knowledge">
 
 			<div class="section-container">
+
 				<div class="border-box"></div>
-				<div class="section-title titles-background"><h2>Knowledge</h2></div>
+
+				<div class="section-title card-shadow small-top-rigth-radio small-bottom-rigth-radio left">
+					<div class="full-height small-top-rigth-radio small-bottom-rigth-radio full-width smoke-background full-background">
+						<div class="full-width  padding-left-1 border-box-model full-height small-top-rigth-radio small-bottom-rigth-radio redgrid rel-position">
+							<h2 class="sub-title abs-position blue-font">Knowledge</h2>
+						</div>
+					</div>
+				</div>
+
 				<div class="border-box"></div>
-				<div class="cards">
+
+				<div class="cards perspective-1">
 					<nav>
 						<div class="left">
 							<a class="panel-stitcher" title="software-ing">Software Engineering</a>
@@ -184,11 +192,26 @@
 							<a class="panel-control" title="next">Next</a>
 						</div>
 					</nav>
-					<div id="software-ing" class="know-container">Soft ing</div>
-					<div id="design" class="know-container">design</div>
-					<div id="code" class="know-container">code</div>
-					<div id="soft" class="know-container">soft</div>
-					<div id="finance" class="know-container">finance	</div>
+
+					<div class="know-cards left">
+						<div id="software-ing" class="know-container card-shadow-ligth card-box border-box-model paper-card">
+							<h3 class="know-area">Software Engineering</h3>
+							<p class="know-content top-margin-1">
+								I put a lot of attention on implement Software Engineering best practices. The objective is to generate maintainable and predictable, and enhance the velocity when I'm delivering new software features.
+							</p>
+							<p class="know-content top-margin-2">
+								I'm also a team player. I take advantage of the different tools of Software Engineering to collaborate with the other members of the development team.
+							</p>
+							<h4 class="know-subtitle top-margin-4">Related Knowledge</h4>
+							<p class="know-content top-margin-5"><b>Metodologies: </b> Scrum, agile, RUP</p>
+							<p class="know-content top-margin-2"><b>Best practices:</b> Cobit, OWASP</p>
+						</div>
+						<div id="design" class="know-container card-shadow-ligth card-box border-box-model paper-card">design</div>
+						<div id="code" class="know-container card-shadow-ligth card-box border-box-model paper-card">code</div>
+						<div id="soft" class="know-container card-shadow-ligth card-box border-box-model paper-card">soft</div>
+						<div id="finance" class="know-container card-shadow-ligth card-box border-box-model paper-card">finance	</div>
+					</div>
+
 				</div>
 			</div>
 
@@ -295,7 +318,7 @@
 
 
 		<script type="text/html" id="project-main-view-template">
-			<div class='full-size project-photo-container img-background' data-class="imgClass">
+			<div class='full-size project-photo-container logo-background neutral-background' data-class="imgClass">
 				<div class="photo-cover">
 
 				</div>
@@ -352,6 +375,8 @@
 					<div class="width-4 height-1 logo-background nodejs left"></div>
 					<div class="width-4 height-1 logo-background node-webkit left"></div>
 					<div class="width-4 height-1 logo-background js left"></div>
+					<div class="width-4 height-1 logo-background nedb left"></div>
+					<div class="width-4 height-1 logo-background githubapi left"></div>
 				</div>
 			</div>
 		</script>

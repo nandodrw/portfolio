@@ -23,7 +23,7 @@
 
             {
                 name : "Sora",
-                imgClass: "start-mining",
+                imgClass: "sora",
                 description : "Social Network for girls graduated from college.",
                 type : "Open Source",
                 position : "Software Engineer"
@@ -31,7 +31,7 @@
 
             {
                 name : "Octolog",
-                imgClass: "start-mining",
+                imgClass: "octolog",
                 description : "Desktop tool to record the learning process while developing a project on GitHub.",
                 type : "Open Source",
                 position : "Software Engineer"
@@ -39,7 +39,7 @@
 
             {
                 name : "MakerSquare",
-                imgClass: "start-mining",
+                imgClass: "mks",
                 description : "MakerSquare main marketing web portal.",
                 type : "Open Source",
                 position : "Software Engineer"
@@ -47,7 +47,7 @@
 
             {
                 name : "Biia Lab",
-                imgClass: "start-mining",
+                imgClass: "biia",
                 description : "E-learning web platform.",
                 type : "Personal Portfolio",
                 position : "Software Engineer"
@@ -55,7 +55,7 @@
 
             {
                 name : "Startup Ranking",
-                imgClass: "start-mining",
+                imgClass: "sr",
                 description : "Startup that generates ranking of other startups around the world.",
                 type : "Web Portal",
                 position : "UI Developer"
@@ -63,7 +63,7 @@
 
             {
                 name : "This Portfolio",
-                imgClass: "start-mining",
+                imgClass: "portfolio",
                 description : "Personal marketing web portal.",
                 type : "Open Source",
                 position : "Software Engineer"
@@ -71,7 +71,7 @@
 
             {
                 name : "Coding Lessons",
-                imgClass: "start-mining",
+                imgClass: "coding",
                 description : "I Helped MakerSquare's student to develop code based academic projects.",
                 type : "Open Source",
                 position : "Software Engineer"
@@ -497,7 +497,7 @@
         // .center
         {
           "z-index": "3",
-          "transform": "translate3D(16.5%,24.5%,0) scale3d(1,1,1)"
+          "transform": "translate3D(16.5%,30%,0) scale3d(1,1,1)"
         },
         // .left-donw
         {
