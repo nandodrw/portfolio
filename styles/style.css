@@ -249,179 +249,184 @@ html {
   background-size: cover;
 }
 
-/* line 26, sass/_backgrounds.sass */
+/* line 24, sass/_backgrounds.sass */
 .img-background {
   background-size: cover;
 }
 
-/* line 29, sass/_backgrounds.sass */
+/* line 27, sass/_backgrounds.sass */
 .logo-background {
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
 }
 
-/* line 34, sass/_backgrounds.sass */
+/* line 32, sass/_backgrounds.sass */
 .neutral-background {
   background-color: #FAFAFA;
 }
 
-/* line 37, sass/_backgrounds.sass */
+/* line 35, sass/_backgrounds.sass */
+.sketch {
+  background-image: url("../images/sketch.png");
+}
+
+/* line 38, sass/_backgrounds.sass */
 .start-mining {
   background-image: url("../images/projects/start.png");
 }
 
-/* line 40, sass/_backgrounds.sass */
+/* line 41, sass/_backgrounds.sass */
 .octolog {
   background-image: url("../images/projects/octolog.png");
 }
 
-/* line 43, sass/_backgrounds.sass */
+/* line 44, sass/_backgrounds.sass */
 .sora {
   background-image: url("../images/projects/sora.png");
 }
 
-/* line 46, sass/_backgrounds.sass */
+/* line 47, sass/_backgrounds.sass */
 .sr {
   background-image: url("../images/projects/sr.png");
 }
 
-/* line 49, sass/_backgrounds.sass */
+/* line 50, sass/_backgrounds.sass */
 .mks {
   background-image: url("../images/projects/mks.png");
 }
 
-/* line 52, sass/_backgrounds.sass */
+/* line 53, sass/_backgrounds.sass */
 .biia {
   background-image: url("../images/projects/biia.png");
 }
 
-/* line 55, sass/_backgrounds.sass */
+/* line 56, sass/_backgrounds.sass */
 .coding {
   background-image: url("../images/projects/coding.png");
 }
 
-/* line 58, sass/_backgrounds.sass */
+/* line 59, sass/_backgrounds.sass */
 .portfolio {
   background-image: url("../images/projects/portfolio.png");
 }
 
-/* line 61, sass/_backgrounds.sass */
+/* line 62, sass/_backgrounds.sass */
 .angular {
   background-image: url("../images/tools/angular.png");
 }
 
-/* line 64, sass/_backgrounds.sass */
+/* line 65, sass/_backgrounds.sass */
 .css3 {
   background-image: url("../images/tools/css3.png");
 }
 
-/* line 67, sass/_backgrounds.sass */
+/* line 68, sass/_backgrounds.sass */
 .divshot {
   background-image: url("../images/tools/divshot.png");
 }
 
-/* line 70, sass/_backgrounds.sass */
+/* line 71, sass/_backgrounds.sass */
 .fbapi {
   background-image: url("../images/tools/fbapi.jpg");
 }
 
-/* line 73, sass/_backgrounds.sass */
+/* line 74, sass/_backgrounds.sass */
 .firebase {
   background-image: url("../images/tools/firebase.jpg");
 }
 
-/* line 76, sass/_backgrounds.sass */
+/* line 77, sass/_backgrounds.sass */
 .heroku {
   background-image: url("../images/tools/heroku.png");
 }
 
-/* line 79, sass/_backgrounds.sass */
+/* line 80, sass/_backgrounds.sass */
 .html5 {
   background-image: url("../images/tools/html5.png");
 }
 
-/* line 82, sass/_backgrounds.sass */
+/* line 83, sass/_backgrounds.sass */
 .jquery {
   background-image: url("../images/tools/jquery.png");
 }
 
-/* line 85, sass/_backgrounds.sass */
+/* line 86, sass/_backgrounds.sass */
 .modernizr {
   background-image: url("../images/tools/html5.png");
 }
 
-/* line 88, sass/_backgrounds.sass */
+/* line 89, sass/_backgrounds.sass */
 .node-webkit {
   background-image: url("../images/tools/node-webkit.png");
 }
 
-/* line 91, sass/_backgrounds.sass */
+/* line 92, sass/_backgrounds.sass */
 .nodejs {
   background-image: url("../images/tools/nodejs.png");
 }
 
-/* line 94, sass/_backgrounds.sass */
+/* line 95, sass/_backgrounds.sass */
 .bootstrap {
   background-image: url("../images/tools/bootstrap.png");
 }
 
-/* line 97, sass/_backgrounds.sass */
+/* line 98, sass/_backgrounds.sass */
 .npm {
   background-image: url("../images/tools/npm.png");
 }
 
-/* line 100, sass/_backgrounds.sass */
+/* line 101, sass/_backgrounds.sass */
 .js {
   background-image: url("../images/tools/js.png");
 }
 
-/* line 103, sass/_backgrounds.sass */
+/* line 104, sass/_backgrounds.sass */
 .php {
   background-image: url("../images/tools/php.png");
 }
 
-/* line 106, sass/_backgrounds.sass */
+/* line 107, sass/_backgrounds.sass */
 .wordpress {
   background-image: url("../images/tools/wordpress.png");
 }
 
-/* line 109, sass/_backgrounds.sass */
+/* line 110, sass/_backgrounds.sass */
 .express {
   background-image: url("../images/tools/express.png");
 }
 
-/* line 112, sass/_backgrounds.sass */
+/* line 113, sass/_backgrounds.sass */
 .handlebars {
   background-image: url("../images/tools/handlebars.png");
 }
 
-/* line 115, sass/_backgrounds.sass */
+/* line 116, sass/_backgrounds.sass */
 .grunt {
   background-image: url("../images/tools/grunt.png");
 }
 
-/* line 118, sass/_backgrounds.sass */
+/* line 119, sass/_backgrounds.sass */
 .ruby {
   background-image: url("../images/tools/ruby.png");
 }
 
-/* line 121, sass/_backgrounds.sass */
+/* line 122, sass/_backgrounds.sass */
 .rails {
   background-image: url("../images/tools/rails.png");
 }
 
-/* line 124, sass/_backgrounds.sass */
+/* line 125, sass/_backgrounds.sass */
 .sinatra {
   background-image: url("../images/tools/sinatra.png");
 }
 
-/* line 127, sass/_backgrounds.sass */
+/* line 128, sass/_backgrounds.sass */
 .nedb {
   background-image: url("../images/tools/nedb.png");
 }
 
-/* line 130, sass/_backgrounds.sass */
+/* line 131, sass/_backgrounds.sass */
 .githubapi {
   background-image: url("../images/tools/githubapi.png");
 }
@@ -1112,6 +1117,8 @@ html {
 .know-cards .know-subtitle {
   font-weight: 200;
   font-size: 1.5em;
+  border-left: 2px solid #236eae;
+  padding-left: 10px;
 }
 
 /*# sourceMappingURL=style.css.map */
