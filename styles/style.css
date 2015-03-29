@@ -137,6 +137,11 @@ html {
   font-size: 1.2em;
 }
 
+/* line 14, sass/_fonts.sass */
+.bold-text {
+  font-weight: 500;
+}
+
 /* line 1, sass/_borders.sass */
 .big-top-rigth-radio {
   border-top-right-radius: 27px;
@@ -496,6 +501,11 @@ html {
   margin-top: 10px;
 }
 
+/* line 23, sass/_margins.sass */
+.left-margin-1 {
+  margin-left: 9px;
+}
+
 /* line 1, sass/_paddings.sass */
 .padding-left-1 {
   padding-left: 34px;
@@ -515,6 +525,11 @@ html {
 /* line 11, sass/_paddings.sass */
 .card-box {
   padding: 22.66667px 22.66667px;
+}
+
+/* line 14, sass/_paddings.sass */
+.padding-box-1 {
+  padding: 9px 3px;
 }
 
 /* line 1, sass/_shadows.sass */
@@ -606,11 +621,16 @@ html {
 }
 
 /* line 45, sass/_dimensions.sass */
+.width-5 {
+  width: 20%;
+}
+
+/* line 48, sass/_dimensions.sass */
 .height-1 {
   height: 50%;
 }
 
-/* line 48, sass/_dimensions.sass */
+/* line 51, sass/_dimensions.sass */
 .height-2 {
   height: 33%;
 }
@@ -1014,8 +1034,13 @@ html {
 }
 
 /* line 307, main.sass */
-.cards nav {
-  background: #ccc;
+.card-controller {
+  background: #236eae;
+  -webkit-box-shadow: inset 0px 0 1px 2px #1a5384;
+  -moz-box-shadow: inset 0px 0 1px 2px #1a5384;
+  -ms-box-shadow: inset 0px 0 1px 2px #1a5384;
+  -o-box-shadow: inset 0px 0 1px 2px #1a5384;
+  box-shadow: inset 0px 0 1px 2px #1a5384;
   top: 15%;
   left: 8%;
   width: 84%;
@@ -1024,26 +1049,13 @@ html {
 }
 
 /* line 316, main.sass */
-.cards nav .left {
-  float: left;
-  width: 50%;
-}
-
-/* line 321, main.sass */
-.cards nav .right {
-  float: right;
-  width: 50%;
-  text-align: right;
-}
-
-/* line 326, main.sass */
 .know-cards {
   transform-style: preserve-3d;
   width: 100%;
   height: 87%;
 }
 
-/* line 331, main.sass */
+/* line 321, main.sass */
 .know-container {
   width: 75%;
   height: 70%;
@@ -1051,7 +1063,7 @@ html {
   position: absolute;
 }
 
-/* line 337, main.sass */
+/* line 327, main.sass */
 #design.know-container {
   -webkit-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
   -moz-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
@@ -1060,7 +1072,7 @@ html {
   transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
 }
 
-/* line 340, main.sass */
+/* line 330, main.sass */
 #code.know-container {
   -webkit-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
   -moz-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
@@ -1069,7 +1081,7 @@ html {
   transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
 }
 
-/* line 343, main.sass */
+/* line 333, main.sass */
 #soft.know-container {
   -webkit-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
   -moz-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
@@ -1078,7 +1090,7 @@ html {
   transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
 }
 
-/* line 346, main.sass */
+/* line 336, main.sass */
 #finance.know-container {
   -webkit-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
   -moz-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
@@ -1087,7 +1099,7 @@ html {
   transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
 }
 
-/* line 349, main.sass */
+/* line 339, main.sass */
 #software-ing.know-container {
   -webkit-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
   -moz-transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
@@ -1096,29 +1108,73 @@ html {
   transition: transform 1s,left 1s,right 1s,top 1s, bottom 1s;
 }
 
-/* line 352, main.sass */
+/* line 342, main.sass */
 .know-cards {
   color: #236eae;
 }
-/* line 354, main.sass */
+/* line 344, main.sass */
 .know-cards .know-area {
   font-size: 2em;
   font-weight: 100;
   border-left: 4px solid #236eae;
   padding-left: 10px;
 }
-/* line 359, main.sass */
+/* line 349, main.sass */
 .know-cards .know-content {
   font-size: 1.2em;
   font-weight: 200;
   line-height: 1.3;
 }
-/* line 363, main.sass */
+/* line 353, main.sass */
 .know-cards .know-subtitle {
   font-weight: 200;
   font-size: 1.5em;
   border-left: 2px solid #236eae;
   padding-left: 10px;
+}
+
+/* line 359, main.sass */
+.panel-stitcher {
+  background-color: #c0d244;
+  color: #236eae;
+  -webkit-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+  -moz-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+  -ms-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+  -o-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+  box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+}
+
+/* line 364, main.sass */
+.panel-stitcher.active {
+  background-color: #b1c32f;
+  color: #1d5b90;
+  -webkit-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+  -moz-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+  -ms-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+  -o-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+  box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+}
+
+/* line 369, main.sass */
+.panel-control {
+  background-color: #c0d244;
+  color: #236eae;
+  -webkit-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+  -moz-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+  -ms-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+  -o-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+  box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
+}
+
+/* line 375, main.sass */
+.panel-control.navigation:active {
+  background-color: #b8cc31;
+  color: #236eae;
+  -webkit-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 1px #b0b0b0;
+  -moz-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 1px #b0b0b0;
+  -ms-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 1px #b0b0b0;
+  -o-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 1px #b0b0b0;
+  box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 1px #b0b0b0;
 }
 
 /*# sourceMappingURL=style.css.map */
