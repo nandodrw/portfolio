@@ -642,6 +642,13 @@
               break;
             case "change":
               window.knowSlider.changeState();
+              if ($(this).hasClass('flaticon-pause47')) {
+                $(this).removeClass('flaticon-pause47');
+                $(this).addClass('flaticon-play87')
+              } else {
+                $(this).removeClass('flaticon-play87');
+                $(this).addClass('flaticon-pause47')
+              }
               break;
             case "next":
               window.knowSlider.changePanel("next");

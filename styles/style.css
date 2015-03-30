@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* line 1, sass/_reset.sass */
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -140,6 +141,43 @@ html {
 /* line 14, sass/_fonts.sass */
 .bold-text {
   font-weight: 500;
+}
+
+@font-face {
+  font-family: "Flaticon";
+  src: url("flaticon.eot");
+  src: url("flaticon.eot#iefix") format("embedded-opentype"), url("flaticon.woff") format("woff"), url("flaticon.ttf") format("truetype"), url("flaticon.svg") format("svg");
+  font-weight: normal;
+  font-style: normal;
+}
+/* line 24, sass/_fonts.sass */
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after {
+  font-family: Flaticon;
+  font-size: 20px;
+  font-style: normal;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/* line 32, sass/_fonts.sass */
+.flaticon-pause47:before {
+  content: "";
+}
+
+/* line 36, sass/_fonts.sass */
+.flaticon-play87:before {
+  content: "";
+}
+
+/* line 40, sass/_fonts.sass */
+.flaticon-player8:before {
+  content: "";
+}
+
+/* line 44, sass/_fonts.sass */
+.flaticon-rewind:before {
+  content: "";
 }
 
 /* line 1, sass/_borders.sass */
@@ -1171,7 +1209,7 @@ html {
 /* line 377, main.sass */
 .panel-control.navigation:active {
   background-color: #b8cc31;
-  color: #236eae;
+  color: #1d5b90;
   -webkit-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 1px #b0b0b0;
   -moz-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 1px #b0b0b0;
   -ms-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 1px #b0b0b0;
