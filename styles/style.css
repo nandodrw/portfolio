@@ -491,33 +491,31 @@ html {
 /* line 1, sass/_containers.sass */
 .content-container {
   width: 75%;
-  height: 4900px;
   padding: 0;
   margin: 0;
   float: left;
 }
 
-/* line 8, sass/_containers.sass */
+/* line 7, sass/_containers.sass */
 .side-decoration {
   width: 25%;
-  height: 4900px;
   padding: 0;
   margin: 0;
   float: right;
 }
 
-/* line 15, sass/_containers.sass */
+/* line 13, sass/_containers.sass */
 .section-container {
   width: 100%;
 }
 
-/* line 18, sass/_containers.sass */
+/* line 16, sass/_containers.sass */
 .full-container {
   width: 100%;
   height: 100%;
 }
 
-/* line 22, sass/_containers.sass */
+/* line 20, sass/_containers.sass */
 .form-container {
   width: 75%;
 }
