@@ -156,28 +156,42 @@ html {
   font-family: Flaticon;
   font-size: 20px;
   font-style: normal;
-  margin-left: 10px;
-  margin-right: 10px;
+  margin-left: 20px;
 }
 
-/* line 32, sass/_fonts.sass */
-.flaticon-pause47:before {
+/* line 31, sass/_fonts.sass */
+.flaticon-github12:before {
   content: "";
 }
 
-/* line 36, sass/_fonts.sass */
-.flaticon-play87:before {
+/* line 34, sass/_fonts.sass */
+.flaticon-linkedin2:before {
   content: "";
 }
 
-/* line 40, sass/_fonts.sass */
-.flaticon-player8:before {
+/* line 37, sass/_fonts.sass */
+.flaticon-pause47:before {
   content: "";
 }
 
-/* line 44, sass/_fonts.sass */
-.flaticon-rewind:before {
+/* line 40, sass/_fonts.sass */
+.flaticon-play87:before {
   content: "";
+}
+
+/* line 43, sass/_fonts.sass */
+.flaticon-player8:before {
+  content: "";
+}
+
+/* line 46, sass/_fonts.sass */
+.flaticon-rewind:before {
+  content: "";
+}
+
+/* line 49, sass/_fonts.sass */
+.flaticon-twitter47:before {
+  content: "";
 }
 
 /* line 1, sass/_borders.sass */
@@ -560,6 +574,11 @@ html {
 }
 
 /* line 32, sass/_margins.sass */
+.left-margin-2 {
+  margin-left: 27px;
+}
+
+/* line 35, sass/_margins.sass */
 .auto-margin {
   margin: auto;
 }
@@ -1468,7 +1487,7 @@ html {
 .tag {
   color: #236eae;
   font-size: 1.2em;
-  text-align: center;
+  text-align: left;
   font-weight: 100;
 }
 
@@ -1503,6 +1522,33 @@ html {
   -ms-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
   -o-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
   box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+}
+
+/* line 577, main.sass */
+.social-holder {
+  background: #236eae;
+  -webkit-box-shadow: inset 3px 0 1px 2px #1a5384;
+  -moz-box-shadow: inset 3px 0 1px 2px #1a5384;
+  -ms-box-shadow: inset 3px 0 1px 2px #1a5384;
+  -o-box-shadow: inset 3px 0 1px 2px #1a5384;
+  box-shadow: inset 3px 0 1px 2px #1a5384;
+  height: 1.2em;
+}
+
+/* line 582, main.sass */
+.social-tag {
+  color: #236eae !important;
+  font-size: 2em;
+  text-align: center;
+  font-weight: 100;
+  margin-top: -0.6em;
+}
+
+/* line 589, main.sass */
+.social-tag::before,
+.social-tag::after {
+  font-size: 1.5em;
+  margin: 0;
 }
 
 /*# sourceMappingURL=style.css.map */
