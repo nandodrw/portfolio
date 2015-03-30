@@ -1137,6 +1137,7 @@ html {
 .panel-stitcher {
   background-color: #c0d244;
   color: #236eae;
+  cursor: pointer;
   -webkit-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
   -moz-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
   -ms-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
@@ -1144,10 +1145,11 @@ html {
   box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
 }
 
-/* line 364, main.sass */
+/* line 365, main.sass */
 .panel-stitcher.active {
   background-color: #b1c32f;
   color: #1d5b90;
+  cursor: default;
   -webkit-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
   -moz-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
   -ms-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
@@ -1155,7 +1157,7 @@ html {
   box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
 }
 
-/* line 369, main.sass */
+/* line 371, main.sass */
 .panel-control {
   background-color: #c0d244;
   color: #236eae;
@@ -1166,7 +1168,7 @@ html {
   box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
 }
 
-/* line 375, main.sass */
+/* line 377, main.sass */
 .panel-control.navigation:active {
   background-color: #b8cc31;
   color: #236eae;
