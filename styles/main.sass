@@ -394,26 +394,39 @@
   list-style-type: none
 
 
-.timeline:before
-  content: " "
-  display: block
-  width: 6px
-  height: 50px
-  margin: auto
-  background: rgb(80,80,80)
-  @include background-linear-gradient(("top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%" ))
+// .timeline:before
+//   content: " "
+//   display: block
+//   width: 6px
+//   height: 50px
+//   margin: auto
+//   background: rgb(80,80,80)
+//   @include background-linear-gradient(("top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%" ))
 
 .timeline li
   padding: 1em 0
 
 
-.timeline li:after
+.timeline .central-bullet:after
   content: ""
   display: block
-  height: 0
-  clear: both
-  visibility: hidden
+  height: 108px
+  width: 9px
+  background-color: darken($green-1, 10%)
+  position: absolute
+  left: 37.2%
+  margin-top: -15px
 
+.timeline .last-bullet:after
+  content: ""
+  display: block
+  height: 108px
+  width: 9px
+  @include background-linear-gradient(( darken($green-1, 10%) + ", " + $green-1 + " 40%, " + lighten($green-1, 10%) + " 60%, transparent 70%" ))
+  // background-color: darken($green-1, 10%)
+  position: absolute
+  left: 37.2%
+  margin-top: -15px
 
 .direction-l
   width: 50%

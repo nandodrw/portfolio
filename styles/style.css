@@ -1241,54 +1241,58 @@ html {
   list-style-type: none;
 }
 
-/* line 397, main.sass */
-.timeline:before {
-  content: " ";
-  display: block;
-  width: 6px;
-  height: 50px;
-  margin: auto;
-  background: #505050;
-  background-image: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background-image: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background-image: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background-image: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-  background-image: linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
-}
-
 /* line 406, main.sass */
 .timeline li {
   padding: 1em 0;
 }
 
 /* line 410, main.sass */
-.timeline li:after {
+.timeline .central-bullet:after {
   content: "";
   display: block;
-  height: 0;
-  clear: both;
-  visibility: hidden;
+  height: 108px;
+  width: 9px;
+  background-color: #a5b72c;
+  position: absolute;
+  left: 37.2%;
+  margin-top: -15px;
 }
 
-/* line 418, main.sass */
+/* line 420, main.sass */
+.timeline .last-bullet:after {
+  content: "";
+  display: block;
+  height: 108px;
+  width: 9px;
+  background-image: -webkit-linear-gradient(#a5b72c, #c0d244 40%, #cedc6d 60%, transparent 70%);
+  background-image: -moz-linear-gradient(#a5b72c, #c0d244 40%, #cedc6d 60%, transparent 70%);
+  background-image: -ms-linear-gradient(#a5b72c, #c0d244 40%, #cedc6d 60%, transparent 70%);
+  background-image: -o-linear-gradient(#a5b72c, #c0d244 40%, #cedc6d 60%, transparent 70%);
+  background-image: linear-gradient(#a5b72c, #c0d244 40%, #cedc6d 60%, transparent 70%);
+  position: absolute;
+  left: 37.2%;
+  margin-top: -15px;
+}
+
+/* line 431, main.sass */
 .direction-l {
   width: 50%;
   margin-right: 50%;
   text-align: right;
 }
 
-/* line 423, main.sass */
+/* line 436, main.sass */
 .direction-r {
   margin-left: 50%;
   width: 50%;
 }
 
-/* line 427, main.sass */
+/* line 440, main.sass */
 .flag-wrapper {
   width: 100%;
 }
 
-/* line 431, main.sass */
+/* line 444, main.sass */
 .flag {
   position: relative;
   background: #f8f8f8;
@@ -1299,17 +1303,17 @@ html {
   color: #236eae;
 }
 
-/* line 440, main.sass */
+/* line 453, main.sass */
 .direction-l .flag {
   right: 30px;
 }
 
-/* line 444, main.sass */
+/* line 457, main.sass */
 .direction-r .flag {
   left: 30px;
 }
 
-/* line 448, main.sass */
+/* line 461, main.sass */
 .direction-l .flag:before,
 .direction-r .flag:before {
   position: absolute;
@@ -1326,12 +1330,12 @@ html {
   z-index: 10;
 }
 
-/* line 464, main.sass */
+/* line 477, main.sass */
 .direction-r .flag:before {
   left: -40px;
 }
 
-/* line 468, main.sass */
+/* line 481, main.sass */
 .direction-l .flag:after {
   content: "";
   position: absolute;
@@ -1346,7 +1350,7 @@ html {
   pointer-events: none;
 }
 
-/* line 483, main.sass */
+/* line 496, main.sass */
 .direction-r .flag:after {
   content: "";
   position: absolute;
@@ -1361,7 +1365,7 @@ html {
   pointer-events: none;
 }
 
-/* line 498, main.sass */
+/* line 511, main.sass */
 .time-wrapper {
   position: relative;
   line-height: 1em;
@@ -1370,35 +1374,35 @@ html {
   vertical-align: middle;
 }
 
-/* line 506, main.sass */
+/* line 519, main.sass */
 .direction-l .time-wrapper {
   margin-right: 27px;
 }
 
-/* line 510, main.sass */
+/* line 523, main.sass */
 .direction-r .time-wrapper {
   margin-left: 27px;
 }
 
-/* line 514, main.sass */
+/* line 527, main.sass */
 .time {
   padding: 4px 6px;
   background: #f8f8f8;
 }
 
-/* line 519, main.sass */
+/* line 532, main.sass */
 .desc {
   position: relative;
   top: 30px;
   right: 30px;
 }
 
-/* line 524, main.sass */
+/* line 537, main.sass */
 .direction-r .desc {
   left: 30px;
 }
 
-/* line 528, main.sass */
+/* line 541, main.sass */
 .direction-r .desc .position-desc,
 .direction-l .desc .position-desc {
   color: #236eae;
@@ -1406,7 +1410,7 @@ html {
   font-weight: 500;
 }
 
-/* line 534, main.sass */
+/* line 547, main.sass */
 .direction-r .desc .location-desc,
 .direction-l .desc .location-desc {
   margin-left: 9px;
