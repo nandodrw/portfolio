@@ -1538,13 +1538,31 @@ html {
 /* line 582, main.sass */
 .social-tag {
   color: #236eae !important;
+  background-color: white;
   font-size: 2em;
   text-align: center;
   font-weight: 100;
   margin-top: -0.6em;
 }
 
-/* line 589, main.sass */
+/* line 590, main.sass */
+.social-tag:hover {
+  color: #1d5b90 !important;
+  background-color: #F8F8F8;
+}
+
+/* line 594, main.sass */
+.social-tag:active {
+  background-color: #e6e6e6;
+  color: #194e7b !important;
+  -webkit-box-shadow: inset 0px 0px 3px 1px#d9d9d9, 0px 0px 2px 0.5px #9f9f9f;
+  -moz-box-shadow: inset 0px 0px 3px 1px#d9d9d9, 0px 0px 2px 0.5px #9f9f9f;
+  -ms-box-shadow: inset 0px 0px 3px 1px#d9d9d9, 0px 0px 2px 0.5px #9f9f9f;
+  -o-box-shadow: inset 0px 0px 3px 1px#d9d9d9, 0px 0px 2px 0.5px #9f9f9f;
+  box-shadow: inset 0px 0px 3px 1px#d9d9d9, 0px 0px 2px 0.5px #9f9f9f;
+}
+
+/* line 599, main.sass */
 .social-tag::before,
 .social-tag::after {
   font-size: 1.5em;

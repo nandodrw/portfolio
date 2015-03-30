@@ -581,10 +581,20 @@
 
 .social-tag
   color: $blue-1 !important
+  background-color: lighten($paper-card-color, 7%)
   font-size: 2em
   text-align: center
   font-weight: 100
   margin-top: -0.6em
+
+.social-tag:hover
+  color: darken($blue-1, 7%) !important
+  background-color: $paper-card-color
+
+.social-tag:active
+  background-color: darken($paper-card-color, 7%)
+  color: darken($blue-1, 12%) !important
+  @include prefix(box-shadow, "inset 0px 0px 3px 1px" + darken($paper-card-color, 12%) + ", 0px 0px 2px 0.5px " + darken($paper-card-color, 35%))
 
 .social-tag::before,
 .social-tag::after
