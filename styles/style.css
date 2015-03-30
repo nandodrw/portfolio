@@ -503,6 +503,11 @@ html {
   height: 100%;
 }
 
+/* line 22, sass/_containers.sass */
+.form-container {
+  width: 75%;
+}
+
 /* line 1, sass/_margins.sass */
 .margin-vertical-1 {
   margin-right: 2%;
@@ -545,8 +550,18 @@ html {
 }
 
 /* line 26, sass/_margins.sass */
+.top-margin-7 {
+  margin-top: 15px;
+}
+
+/* line 29, sass/_margins.sass */
 .left-margin-1 {
   margin-left: 9px;
+}
+
+/* line 32, sass/_margins.sass */
+.auto-margin {
+  margin: auto;
 }
 
 /* line 1, sass/_paddings.sass */
@@ -578,6 +593,16 @@ html {
 /* line 17, sass/_paddings.sass */
 .padding-box-2 {
   padding: 9px 9px;
+}
+
+/* line 20, sass/_paddings.sass */
+.padding-box-3 {
+  padding: 3px 3px;
+}
+
+/* line 23, sass/_paddings.sass */
+.padding-box-4 {
+  padding: 9px 27px;
 }
 
 /* line 1, sass/_shadows.sass */
@@ -639,46 +664,51 @@ html {
 }
 
 /* line 24, sass/_dimensions.sass */
+.threeone-width-long {
+  width: 75%;
+}
+
+/* line 27, sass/_dimensions.sass */
 .threeone-height-short {
   height: 25%;
 }
 
-/* line 27, sass/_dimensions.sass */
+/* line 30, sass/_dimensions.sass */
 .threeone-height-short-1 {
   height: 12.5%;
 }
 
-/* line 32, sass/_dimensions.sass */
+/* line 35, sass/_dimensions.sass */
 .width-1 {
   width: 96%;
 }
 
-/* line 35, sass/_dimensions.sass */
+/* line 38, sass/_dimensions.sass */
 .width-2 {
   width: 98%;
 }
 
-/* line 39, sass/_dimensions.sass */
+/* line 42, sass/_dimensions.sass */
 .width-3 {
   width: 25%;
 }
 
-/* line 42, sass/_dimensions.sass */
+/* line 45, sass/_dimensions.sass */
 .width-4 {
   width: 33%;
 }
 
-/* line 45, sass/_dimensions.sass */
+/* line 48, sass/_dimensions.sass */
 .width-5 {
   width: 20%;
 }
 
-/* line 48, sass/_dimensions.sass */
+/* line 51, sass/_dimensions.sass */
 .height-1 {
   height: 50%;
 }
 
-/* line 51, sass/_dimensions.sass */
+/* line 54, sass/_dimensions.sass */
 .height-2 {
   height: 33%;
 }
@@ -1241,12 +1271,12 @@ html {
   list-style-type: none;
 }
 
-/* line 406, main.sass */
+/* line 396, main.sass */
 .timeline li {
   padding: 1em 0;
 }
 
-/* line 410, main.sass */
+/* line 400, main.sass */
 .timeline .central-bullet:after {
   content: "";
   display: block;
@@ -1258,7 +1288,7 @@ html {
   margin-top: -15px;
 }
 
-/* line 420, main.sass */
+/* line 410, main.sass */
 .timeline .last-bullet:after {
   content: "";
   display: block;
@@ -1274,25 +1304,25 @@ html {
   margin-top: -15px;
 }
 
-/* line 431, main.sass */
+/* line 421, main.sass */
 .direction-l {
   width: 50%;
   margin-right: 50%;
   text-align: right;
 }
 
-/* line 436, main.sass */
+/* line 426, main.sass */
 .direction-r {
   margin-left: 50%;
   width: 50%;
 }
 
-/* line 440, main.sass */
+/* line 430, main.sass */
 .flag-wrapper {
   width: 100%;
 }
 
-/* line 444, main.sass */
+/* line 434, main.sass */
 .flag {
   position: relative;
   background: #f8f8f8;
@@ -1303,17 +1333,17 @@ html {
   color: #236eae;
 }
 
-/* line 453, main.sass */
+/* line 443, main.sass */
 .direction-l .flag {
   right: 30px;
 }
 
-/* line 457, main.sass */
+/* line 447, main.sass */
 .direction-r .flag {
   left: 30px;
 }
 
-/* line 461, main.sass */
+/* line 451, main.sass */
 .direction-l .flag:before,
 .direction-r .flag:before {
   position: absolute;
@@ -1330,19 +1360,17 @@ html {
   z-index: 10;
 }
 
-/* line 477, main.sass */
+/* line 467, main.sass */
 .direction-r .flag:before {
   left: -40px;
 }
 
-/* line 481, main.sass */
+/* line 471, main.sass */
 .direction-l .flag:after {
   content: "";
   position: absolute;
   left: 100%;
   top: 50%;
-  /* height: 0 */
-  /* width: 0 */
   margin-top: -8px;
   border: solid transparent;
   border-left-color: #f8f8f8;
@@ -1350,7 +1378,7 @@ html {
   pointer-events: none;
 }
 
-/* line 496, main.sass */
+/* line 482, main.sass */
 .direction-r .flag:after {
   content: "";
   position: absolute;
@@ -1365,7 +1393,7 @@ html {
   pointer-events: none;
 }
 
-/* line 511, main.sass */
+/* line 495, main.sass */
 .time-wrapper {
   position: relative;
   line-height: 1em;
@@ -1374,35 +1402,35 @@ html {
   vertical-align: middle;
 }
 
-/* line 519, main.sass */
+/* line 503, main.sass */
 .direction-l .time-wrapper {
   margin-right: 27px;
 }
 
-/* line 523, main.sass */
+/* line 507, main.sass */
 .direction-r .time-wrapper {
   margin-left: 27px;
 }
 
-/* line 527, main.sass */
+/* line 511, main.sass */
 .time {
   padding: 4px 6px;
   background: #f8f8f8;
 }
 
-/* line 532, main.sass */
+/* line 516, main.sass */
 .desc {
   position: relative;
   top: 30px;
   right: 30px;
 }
 
-/* line 537, main.sass */
+/* line 521, main.sass */
 .direction-r .desc {
   left: 30px;
 }
 
-/* line 541, main.sass */
+/* line 524, main.sass */
 .direction-r .desc .position-desc,
 .direction-l .desc .position-desc {
   color: #236eae;
@@ -1410,13 +1438,71 @@ html {
   font-weight: 500;
 }
 
-/* line 547, main.sass */
+/* line 530, main.sass */
 .direction-r .desc .location-desc,
 .direction-l .desc .location-desc {
   margin-left: 9px;
   color: #236eae;
   font-size: 0.77777em;
   font-weight: 200;
+}
+
+/* line 541, main.sass */
+.form-label {
+  color: #236eae;
+  font-weight: 500;
+  font-size: 1em;
+}
+
+/* line 546, main.sass */
+.tag-holder {
+  background: #236eae;
+  -webkit-box-shadow: inset 3px 0 1px 2px #1a5384;
+  -moz-box-shadow: inset 3px 0 1px 2px #1a5384;
+  -ms-box-shadow: inset 3px 0 1px 2px #1a5384;
+  -o-box-shadow: inset 3px 0 1px 2px #1a5384;
+  box-shadow: inset 3px 0 1px 2px #1a5384;
+}
+
+/* line 550, main.sass */
+.tag {
+  color: #236eae;
+  font-size: 1.2em;
+  text-align: center;
+  font-weight: 100;
+}
+
+/* line 556, main.sass */
+.data-input {
+  border: none;
+  resize: none;
+  overflow: scroll;
+  color: #236eae;
+  font-size: 0.9rem;
+  line-height: 1.5;
+}
+
+/* line 564, main.sass */
+.submit-form {
+  color: #236eae !important;
+  font-size: 1.2em;
+  font-weight: 600;
+  background-color: #cad961;
+}
+
+/* line 570, main.sass */
+.submit-form:hover {
+  background-color: #c0d244;
+}
+
+/* line 573, main.sass */
+.submit-form:active {
+  background-color: #b1c32f;
+  -webkit-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+  -moz-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+  -ms-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+  -o-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
+  box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
 }
 
 /*# sourceMappingURL=style.css.map */

@@ -393,16 +393,6 @@
   margin: auto
   list-style-type: none
 
-
-// .timeline:before
-//   content: " "
-//   display: block
-//   width: 6px
-//   height: 50px
-//   margin: auto
-//   background: rgb(80,80,80)
-//   @include background-linear-gradient(("top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%" ))
-
 .timeline li
   padding: 1em 0
 
@@ -483,15 +473,11 @@
   position: absolute
   left: 100%
   top: 50%
-  /* height: 0 */
-  /* width: 0 */
   margin-top: -8px
   border: solid transparent
   border-left-color: rgb(248,248,248)
   border-width: 8px
   pointer-events: none
-  // @include prefix(box-shadow, "0 0 0.5px 0.5px " + darken($ligth-gray, 20%) + ", 0px 10px 5px -5px " + darken($ligth-gray, 20%))
-
 
 .direction-r .flag:after
   content: ""
@@ -505,8 +491,6 @@
   border-right-color: rgb(248,248,248)
   border-width: 8px
   pointer-events: none
-  // @include prefix(box-shadow, "0 0 0.5px 0.5px " + darken($ligth-gray, 20%) + ", 0px 10px 5px -5px " + darken($ligth-gray, 20%))
-
 
 .time-wrapper
   position: relative
@@ -535,7 +519,6 @@
   right: 30px
 
 .direction-r .desc
-  // margin: 1em 0 0 0.75em
   left: 30px
 
 .direction-r .desc .position-desc,
@@ -550,6 +533,46 @@
   color: $blue-1
   font-size: 0.77777em
   font-weight: 200
+
+// --------------------
+// Contact section
+// --------------------
+
+.form-label
+  color: $blue-1
+  font-weight: 500
+  font-size: 1em
+
+.tag-holder
+  background: $blue-1
+  @include prefix(box-shadow, "inset 3px 0 1px 2px " + darken($blue-1, 10%) )
+
+.tag
+  color: $blue-1
+  font-size: 1.2em
+  text-align: center
+  font-weight: 100
+
+.data-input
+  border: none
+  resize: none
+  overflow: scroll
+  color: $blue-1
+  font-size: 0.9rem
+  line-height: 1.5
+
+.submit-form
+  color: $blue-1 !important
+  font-size: 1.2em
+  font-weight: 600
+  background-color: lighten($green-1, 7%)
+
+.submit-form:hover
+  background-color: $green-1
+
+.submit-form:active
+  background-color: darken($green-1, 7%)
+  @include prefix(box-shadow, "inset 0px 0px 3px 1px" + darken($green-1, 12%) + ", 0px 0px 2px 0.5px " + darken($ligth-gray, 35%))
 
 
 
