@@ -1678,29 +1678,29 @@ html {
   margin: 0;
 }
 
-/* line 641, main.sass */
+/* line 690, main.sass */
 .mobile-flag-hide {
   display: block;
 }
 @media screen and (max-width: 800px) {
-  /* line 641, main.sass */
+  /* line 690, main.sass */
   .mobile-flag-hide {
     display: none;
   }
 }
 
-/* line 646, main.sass */
+/* line 695, main.sass */
 .mobile-flag-show {
   display: none;
 }
 @media screen and (max-width: 800px) {
-  /* line 646, main.sass */
+  /* line 695, main.sass */
   .mobile-flag-show {
     display: block;
   }
 }
 
-/* line 651, main.sass */
+/* line 700, main.sass */
 .mobile-announcement {
   color: #236eae;
   font-size: 2.5em;
