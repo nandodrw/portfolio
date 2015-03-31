@@ -147,9 +147,9 @@
       }
     });
 
-    // parallax
-    $('#blob-container').css("width", $('body').css('width'));
-    $('#blob-container').css("height",$('body').css('height'));
+    // inicialize side decoration dimentions
+    $('#side-decoration').css("height", $('#content').css("height"));
+
   });
 
 })();

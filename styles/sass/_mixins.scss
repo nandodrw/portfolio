@@ -7,6 +7,15 @@
   #{$property}: #{$value};
 }
 
+@mixin prefix-transition-transform($value, $vendors: webkit moz ms o) {
+  @if $vendors {
+    @each $vendor in $vendors {
+      #{"-" + $vendor + "-transition"}: #{"-" + $vendor + "-" + "transform " + $value};
+    }
+  }
+  #{"transition"}: #{"transform " + $value};
+}
+
 @mixin background-linear-gradient($gradients) {
   $vendors: "-webkit-" "-moz-" "-ms-" "-o-" "";
   @each $vendor in $vendors {
