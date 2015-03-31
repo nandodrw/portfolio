@@ -110,8 +110,6 @@
                 var mainPortBox = document.getElementsByClassName('main-port-box')[0];
                 var matrixContent = mainPortBox.style.transform;
                 if(matrixContent[6] === '3' && matrixContent[7] === 'd'){
-                    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-                    // console.log('matrixContent 1:',matrixContent);
                     var matrixArr = matrixContent.substr(9,matrixContent.length-10).split(",");
 
                     switch (face){
@@ -148,10 +146,7 @@
                     }
 
                     matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                    // console.log('matrixContent 2:',matrixContent);
-                    // console.log('--------------------------------------------------------');
                     mainPortBox.style.transform = matrixContent;
-                    // $('.main-port-box').css('transform',matrixContent);
                 }
             },
 
@@ -559,10 +554,6 @@
         updateCardControl(direction);
         applyStylesPanels(panelElements,panelStyles);
       };
-
-      // goToSpecificPanel = function(panel){
-
-      // };
 
       var knowSlider = {
         changePanel : function(direction){
