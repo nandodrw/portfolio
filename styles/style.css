@@ -1672,7 +1672,7 @@ html {
 .mobile-flag-hide {
   display: block;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   /* line 634, main.sass */
   .mobile-flag-hide {
     display: none;
@@ -1683,7 +1683,7 @@ html {
 .mobile-flag-show {
   display: none;
 }
-@media screen and (max-width: 700px) {
+@media screen and (max-width: 800px) {
   /* line 639, main.sass */
   .mobile-flag-show {
     display: block;
