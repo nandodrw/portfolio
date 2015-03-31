@@ -156,7 +156,6 @@ html {
   font-family: Flaticon;
   font-size: 20px;
   font-style: normal;
-  margin-left: 20px;
 }
 
 /* line 31, sass/_fonts.sass */
@@ -1256,6 +1255,7 @@ html {
 .panel-control {
   background-color: #c0d244;
   color: #236eae;
+  cursor: pointer;
   -webkit-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
   -moz-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
   -ms-box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
@@ -1263,7 +1263,7 @@ html {
   box-shadow: -1px 0 1px 2px #a5b72c, 0px 2px 5px 3px #979797;
 }
 
-/* line 377, main.sass */
+/* line 378, main.sass */
 .panel-control.navigation:active {
   background-color: #b8cc31;
   color: #1d5b90;
@@ -1274,26 +1274,26 @@ html {
   box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 1px #b0b0b0;
 }
 
-/* line 386, main.sass */
+/* line 387, main.sass */
 .list-container {
   width: 100%;
   height: 87%;
   overflow: hidden;
 }
 
-/* line 391, main.sass */
+/* line 392, main.sass */
 .timeline {
   width: 75%;
   margin: auto;
   list-style-type: none;
 }
 
-/* line 396, main.sass */
+/* line 397, main.sass */
 .timeline li {
   padding: 1em 0;
 }
 
-/* line 400, main.sass */
+/* line 401, main.sass */
 .timeline .central-bullet:after {
   content: "";
   display: block;
@@ -1305,7 +1305,7 @@ html {
   margin-top: -15px;
 }
 
-/* line 410, main.sass */
+/* line 411, main.sass */
 .timeline .last-bullet:after {
   content: "";
   display: block;
@@ -1321,25 +1321,25 @@ html {
   margin-top: -15px;
 }
 
-/* line 421, main.sass */
+/* line 422, main.sass */
 .direction-l {
   width: 50%;
   margin-right: 50%;
   text-align: right;
 }
 
-/* line 426, main.sass */
+/* line 427, main.sass */
 .direction-r {
   margin-left: 50%;
   width: 50%;
 }
 
-/* line 430, main.sass */
+/* line 431, main.sass */
 .flag-wrapper {
   width: 100%;
 }
 
-/* line 434, main.sass */
+/* line 435, main.sass */
 .flag {
   position: relative;
   background: #f8f8f8;
@@ -1350,17 +1350,17 @@ html {
   color: #236eae;
 }
 
-/* line 443, main.sass */
+/* line 444, main.sass */
 .direction-l .flag {
   right: 30px;
 }
 
-/* line 447, main.sass */
+/* line 448, main.sass */
 .direction-r .flag {
   left: 30px;
 }
 
-/* line 451, main.sass */
+/* line 452, main.sass */
 .direction-l .flag:before,
 .direction-r .flag:before {
   position: absolute;
@@ -1377,12 +1377,12 @@ html {
   z-index: 10;
 }
 
-/* line 467, main.sass */
+/* line 468, main.sass */
 .direction-r .flag:before {
   left: -40px;
 }
 
-/* line 471, main.sass */
+/* line 472, main.sass */
 .direction-l .flag:after {
   content: "";
   position: absolute;
@@ -1395,7 +1395,7 @@ html {
   pointer-events: none;
 }
 
-/* line 482, main.sass */
+/* line 483, main.sass */
 .direction-r .flag:after {
   content: "";
   position: absolute;
@@ -1410,7 +1410,7 @@ html {
   pointer-events: none;
 }
 
-/* line 495, main.sass */
+/* line 496, main.sass */
 .time-wrapper {
   position: relative;
   line-height: 1em;
@@ -1419,35 +1419,35 @@ html {
   vertical-align: middle;
 }
 
-/* line 503, main.sass */
+/* line 504, main.sass */
 .direction-l .time-wrapper {
   margin-right: 27px;
 }
 
-/* line 507, main.sass */
+/* line 508, main.sass */
 .direction-r .time-wrapper {
   margin-left: 27px;
 }
 
-/* line 511, main.sass */
+/* line 512, main.sass */
 .time {
   padding: 4px 6px;
   background: #f8f8f8;
 }
 
-/* line 516, main.sass */
+/* line 517, main.sass */
 .desc {
   position: relative;
   top: 30px;
   right: 30px;
 }
 
-/* line 521, main.sass */
+/* line 522, main.sass */
 .direction-r .desc {
   left: 30px;
 }
 
-/* line 524, main.sass */
+/* line 525, main.sass */
 .direction-r .desc .position-desc,
 .direction-l .desc .position-desc {
   color: #236eae;
@@ -1455,7 +1455,7 @@ html {
   font-weight: 500;
 }
 
-/* line 530, main.sass */
+/* line 531, main.sass */
 .direction-r .desc .location-desc,
 .direction-l .desc .location-desc {
   margin-left: 9px;
@@ -1464,14 +1464,14 @@ html {
   font-weight: 200;
 }
 
-/* line 541, main.sass */
+/* line 542, main.sass */
 .form-label {
   color: #236eae;
   font-weight: 500;
   font-size: 1em;
 }
 
-/* line 546, main.sass */
+/* line 547, main.sass */
 .tag-holder {
   background: #236eae;
   -webkit-box-shadow: inset 3px 0 1px 2px #1a5384;
@@ -1481,7 +1481,7 @@ html {
   box-shadow: inset 3px 0 1px 2px #1a5384;
 }
 
-/* line 550, main.sass */
+/* line 551, main.sass */
 .tag {
   color: #236eae;
   font-size: 1.2em;
@@ -1489,7 +1489,7 @@ html {
   font-weight: 100;
 }
 
-/* line 556, main.sass */
+/* line 557, main.sass */
 .data-input {
   border: none;
   resize: none;
@@ -1499,7 +1499,7 @@ html {
   line-height: 1.5;
 }
 
-/* line 564, main.sass */
+/* line 565, main.sass */
 .submit-form {
   color: #236eae !important;
   font-size: 1.2em;
@@ -1507,12 +1507,12 @@ html {
   background-color: #cad961;
 }
 
-/* line 570, main.sass */
+/* line 571, main.sass */
 .submit-form:hover {
   background-color: #c0d244;
 }
 
-/* line 573, main.sass */
+/* line 574, main.sass */
 .submit-form:active {
   background-color: #b1c32f;
   -webkit-box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
@@ -1522,7 +1522,7 @@ html {
   box-shadow: inset 0px 0px 3px 1px#9eaf2a, 0px 0px 2px 0.5px #8a8a8a;
 }
 
-/* line 577, main.sass */
+/* line 578, main.sass */
 .social-holder {
   background: #236eae;
   -webkit-box-shadow: inset 3px 0 1px 2px #1a5384;
@@ -1533,7 +1533,7 @@ html {
   height: 1.2em;
 }
 
-/* line 582, main.sass */
+/* line 583, main.sass */
 .social-tag {
   color: #236eae !important;
   background-color: white;
@@ -1543,13 +1543,13 @@ html {
   margin-top: -0.6em;
 }
 
-/* line 590, main.sass */
+/* line 591, main.sass */
 .social-tag:hover {
   color: #1d5b90 !important;
   background-color: #F8F8F8;
 }
 
-/* line 594, main.sass */
+/* line 595, main.sass */
 .social-tag:active {
   background-color: #e6e6e6;
   color: #194e7b !important;
@@ -1560,7 +1560,7 @@ html {
   box-shadow: inset 0px 0px 3px 1px#d9d9d9, 0px 0px 2px 0.5px #9f9f9f;
 }
 
-/* line 599, main.sass */
+/* line 600, main.sass */
 .social-tag::before,
 .social-tag::after {
   font-size: 1.5em;
