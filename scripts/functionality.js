@@ -12,4 +12,24 @@ $(document).ready(function() {
     var message = $('#text-form').val("");
   })
 
+  $('.link_map').click(function (e) {
+    var linkTo = $(this).attr('id');
+
+    switch(linkTo) {
+      case 'portfolio-link':
+        window.location.href = '#portfolio';
+        break;
+      case 'skills-link':
+        window.location.href = '#knowledge';
+        break;
+      case 'experience-link':
+        window.location.href = '#experience';
+        break;
+      case  'contact-link':
+        window.location.href = '#contact';
+        break;
+    }
+
+  })
+
 });
