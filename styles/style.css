@@ -594,11 +594,16 @@ html {
 }
 
 /* line 35, sass/_margins.sass */
+.bottom-margin-1 {
+  margin-bottom: 9px;
+}
+
+/* line 38, sass/_margins.sass */
 .auto-margin {
   margin: auto;
 }
 
-/* line 38, sass/_margins.sass */
+/* line 41, sass/_margins.sass */
 .margin-v {
   margin-top: 25%;
   margin-left: 12.5%;
