@@ -627,10 +627,22 @@
   font-size: 1.5em
   margin: 0
 
+// ----------
+// Responsive
+// ----------
 
+.mobile-flag-hide
+  display: block
+  @media screen and (max-width: $page-break-4)
+    display: none
 
+.mobile-flag-show
+  display: none
+  @media screen and (max-width: $page-break-4)
+    display: block
 
-
-
+.mobile-announcement
+  color: $blue-1
+  font-size: 2.5em
 
 

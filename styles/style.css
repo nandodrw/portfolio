@@ -141,7 +141,7 @@ html {
 @media screen and (max-width: 600px) {
   /* line 4, sass/_fonts.sass */
   html {
-    font-size: 6px;
+    font-size: 7.5px;
   }
 }
 
@@ -598,6 +598,13 @@ html {
   margin: auto;
 }
 
+/* line 38, sass/_margins.sass */
+.margin-v {
+  margin-top: 25%;
+  margin-left: 12.5%;
+  margin-right: 12.5%;
+}
+
 /* line 1, sass/_paddings.sass */
 .padding-left-1 {
   padding-left: 34px;
@@ -658,6 +665,15 @@ html {
 }
 
 /* line 7, sass/_shadows.sass */
+.card-shado-blueprint {
+  -webkit-box-shadow: 0px 0 1px 1px #020e18, 0px 20px 10px -10px #020e18;
+  -moz-box-shadow: 0px 0 1px 1px #020e18, 0px 20px 10px -10px #020e18;
+  -ms-box-shadow: 0px 0 1px 1px #020e18, 0px 20px 10px -10px #020e18;
+  -o-box-shadow: 0px 0 1px 1px #020e18, 0px 20px 10px -10px #020e18;
+  box-shadow: 0px 0 1px 1px #020e18, 0px 20px 10px -10px #020e18;
+}
+
+/* line 10, sass/_shadows.sass */
 .card-shadow-ligth {
   -webkit-box-shadow: 0px 10px 5px -5px #b0b0b0;
   -moz-box-shadow: 0px 10px 5px -5px #b0b0b0;
@@ -666,7 +682,16 @@ html {
   box-shadow: 0px 10px 5px -5px #b0b0b0;
 }
 
-/* line 10, sass/_shadows.sass */
+/* line 13, sass/_shadows.sass */
+.card-shadow-blueprint-ligth {
+  -webkit-box-shadow: 0px 10px 5px -5px #062947;
+  -moz-box-shadow: 0px 10px 5px -5px #062947;
+  -ms-box-shadow: 0px 10px 5px -5px #062947;
+  -o-box-shadow: 0px 10px 5px -5px #062947;
+  box-shadow: 0px 10px 5px -5px #062947;
+}
+
+/* line 16, sass/_shadows.sass */
 .simple-shadow {
   -webkit-box-shadow: 0px 0 1px 1px #979797;
   -moz-box-shadow: 0px 0 1px 1px #979797;
@@ -1641,6 +1666,34 @@ html {
 .social-tag::after {
   font-size: 1.5em;
   margin: 0;
+}
+
+/* line 634, main.sass */
+.mobile-flag-hide {
+  display: block;
+}
+@media screen and (max-width: 500px) {
+  /* line 634, main.sass */
+  .mobile-flag-hide {
+    display: none;
+  }
+}
+
+/* line 639, main.sass */
+.mobile-flag-show {
+  display: none;
+}
+@media screen and (max-width: 500px) {
+  /* line 639, main.sass */
+  .mobile-flag-show {
+    display: block;
+  }
+}
+
+/* line 644, main.sass */
+.mobile-announcement {
+  color: #236eae;
+  font-size: 2.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
