@@ -3,7 +3,12 @@ html
 
 html
   font-size: 16px
-
+  @media screen and (max-width: $page-break-1)
+    font-size: 10px
+  @media screen and (max-width: $page-break-2)
+    font-size: 8px
+  @media screen and (max-width: $page-break-3)
+    font-size: 6px
 
 .orange-font
   color: $orange-1
@@ -28,7 +33,7 @@ html
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after
   font-family: Flaticon
-  font-size: 20px
+  font-size: 1.2em
   font-style: normal
   // margin-left: 20px
 

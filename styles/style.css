@@ -126,24 +126,42 @@ html {
 html {
   font-size: 16px;
 }
+@media screen and (max-width: 1000px) {
+  /* line 4, sass/_fonts.sass */
+  html {
+    font-size: 10px;
+  }
+}
+@media screen and (max-width: 800px) {
+  /* line 4, sass/_fonts.sass */
+  html {
+    font-size: 8px;
+  }
+}
+@media screen and (max-width: 600px) {
+  /* line 4, sass/_fonts.sass */
+  html {
+    font-size: 6px;
+  }
+}
 
-/* line 8, sass/_fonts.sass */
+/* line 13, sass/_fonts.sass */
 .orange-font {
   color: #EC6D1C;
 }
 
-/* line 11, sass/_fonts.sass */
+/* line 16, sass/_fonts.sass */
 .blue-font {
   color: #236eae;
 }
 
-/* line 14, sass/_fonts.sass */
+/* line 19, sass/_fonts.sass */
 .content-font {
   line-height: 1.5;
   font-size: 1.2em;
 }
 
-/* line 18, sass/_fonts.sass */
+/* line 23, sass/_fonts.sass */
 .bold-text {
   font-weight: 500;
 }
@@ -155,45 +173,45 @@ html {
   font-weight: normal;
   font-style: normal;
 }
-/* line 28, sass/_fonts.sass */
+/* line 33, sass/_fonts.sass */
 [class^="flaticon-"]:before, [class*=" flaticon-"]:before,
 [class^="flaticon-"]:after, [class*=" flaticon-"]:after {
   font-family: Flaticon;
-  font-size: 20px;
+  font-size: 1.2em;
   font-style: normal;
 }
 
-/* line 35, sass/_fonts.sass */
+/* line 40, sass/_fonts.sass */
 .flaticon-github12:before {
   content: "";
 }
 
-/* line 38, sass/_fonts.sass */
+/* line 43, sass/_fonts.sass */
 .flaticon-linkedin2:before {
   content: "";
 }
 
-/* line 41, sass/_fonts.sass */
+/* line 46, sass/_fonts.sass */
 .flaticon-pause47:before {
   content: "";
 }
 
-/* line 44, sass/_fonts.sass */
+/* line 49, sass/_fonts.sass */
 .flaticon-play87:before {
   content: "";
 }
 
-/* line 47, sass/_fonts.sass */
+/* line 52, sass/_fonts.sass */
 .flaticon-player8:before {
   content: "";
 }
 
-/* line 50, sass/_fonts.sass */
+/* line 55, sass/_fonts.sass */
 .flaticon-rewind:before {
   content: "";
 }
 
-/* line 53, sass/_fonts.sass */
+/* line 58, sass/_fonts.sass */
 .flaticon-twitter47:before {
   content: "";
 }
@@ -752,13 +770,13 @@ html {
 
 /* line 25, main.sass */
 .main-title {
-  font-size: 500%;
+  font-size: 4em;
   text-shadow: rgba(165, 183, 44, 0.8) 2px 2px 2.8px, rgba(165, 183, 44, 0.8) -2px -2px 2.8px;
 }
 
 /* line 29, main.sass */
 .sub-title {
-  font-size: 200%;
+  font-size: 2em;
   font-weight: 100;
   text-shadow: rgba(165, 183, 44, 0.8) 1px 1px 2.8px, rgba(165, 183, 44, 0.8) -1px -1px 2.8px;
   bottom: 12%;
