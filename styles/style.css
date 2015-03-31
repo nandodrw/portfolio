@@ -323,166 +323,161 @@ html {
 }
 
 /* line 35, sass/_backgrounds.sass */
-.sketch {
-  background-image: url("../images/sketch.png");
+.start-mining {
+  background-image: url("../images/projects/start.jpg");
 }
 
 /* line 38, sass/_backgrounds.sass */
-.start-mining {
-  background-image: url("../images/projects/start.png");
+.octolog {
+  background-image: url("../images/projects/octolog.jpg");
 }
 
 /* line 41, sass/_backgrounds.sass */
-.octolog {
-  background-image: url("../images/projects/octolog.png");
+.sora {
+  background-image: url("../images/projects/sora.jpg");
 }
 
 /* line 44, sass/_backgrounds.sass */
-.sora {
-  background-image: url("../images/projects/sora.png");
+.sr {
+  background-image: url("../images/projects/sr.jpg");
 }
 
 /* line 47, sass/_backgrounds.sass */
-.sr {
-  background-image: url("../images/projects/sr.png");
+.mks {
+  background-image: url("../images/projects/mks.jpg");
 }
 
 /* line 50, sass/_backgrounds.sass */
-.mks {
-  background-image: url("../images/projects/mks.png");
+.biia {
+  background-image: url("../images/projects/biia.jpg");
 }
 
 /* line 53, sass/_backgrounds.sass */
-.biia {
-  background-image: url("../images/projects/biia.png");
+.coding {
+  background-image: url("../images/projects/coding.jpg");
 }
 
 /* line 56, sass/_backgrounds.sass */
-.coding {
-  background-image: url("../images/projects/coding.png");
+.portfolio {
+  background-image: url("../images/projects/portfolio.jpg");
 }
 
 /* line 59, sass/_backgrounds.sass */
-.portfolio {
-  background-image: url("../images/projects/portfolio.png");
-}
-
-/* line 62, sass/_backgrounds.sass */
 .angular {
   background-image: url("../images/tools/angular.png");
 }
 
-/* line 65, sass/_backgrounds.sass */
+/* line 62, sass/_backgrounds.sass */
 .css3 {
   background-image: url("../images/tools/css3.png");
 }
 
-/* line 68, sass/_backgrounds.sass */
+/* line 65, sass/_backgrounds.sass */
 .divshot {
   background-image: url("../images/tools/divshot.png");
 }
 
-/* line 71, sass/_backgrounds.sass */
+/* line 68, sass/_backgrounds.sass */
 .fbapi {
-  background-image: url("../images/tools/fbapi.jpg");
+  background-image: url("../images/tools/fbapi.png");
+}
+
+/* line 71, sass/_backgrounds.sass */
+.firebase {
+  background-image: url("../images/tools/firebase.png");
 }
 
 /* line 74, sass/_backgrounds.sass */
-.firebase {
-  background-image: url("../images/tools/firebase.jpg");
-}
-
-/* line 77, sass/_backgrounds.sass */
 .heroku {
   background-image: url("../images/tools/heroku.png");
 }
 
-/* line 80, sass/_backgrounds.sass */
+/* line 77, sass/_backgrounds.sass */
 .html5 {
   background-image: url("../images/tools/html5.png");
 }
 
-/* line 83, sass/_backgrounds.sass */
+/* line 80, sass/_backgrounds.sass */
 .jquery {
   background-image: url("../images/tools/jquery.png");
 }
 
-/* line 86, sass/_backgrounds.sass */
+/* line 83, sass/_backgrounds.sass */
 .modernizr {
   background-image: url("../images/tools/html5.png");
 }
 
-/* line 89, sass/_backgrounds.sass */
+/* line 86, sass/_backgrounds.sass */
 .node-webkit {
   background-image: url("../images/tools/node-webkit.png");
 }
 
-/* line 92, sass/_backgrounds.sass */
+/* line 89, sass/_backgrounds.sass */
 .nodejs {
   background-image: url("../images/tools/nodejs.png");
 }
 
-/* line 95, sass/_backgrounds.sass */
+/* line 92, sass/_backgrounds.sass */
 .bootstrap {
   background-image: url("../images/tools/bootstrap.png");
 }
 
-/* line 98, sass/_backgrounds.sass */
+/* line 95, sass/_backgrounds.sass */
 .npm {
   background-image: url("../images/tools/npm.png");
 }
 
-/* line 101, sass/_backgrounds.sass */
+/* line 98, sass/_backgrounds.sass */
 .js {
   background-image: url("../images/tools/js.png");
 }
 
-/* line 104, sass/_backgrounds.sass */
+/* line 101, sass/_backgrounds.sass */
 .php {
   background-image: url("../images/tools/php.png");
 }
 
-/* line 107, sass/_backgrounds.sass */
+/* line 104, sass/_backgrounds.sass */
 .wordpress {
   background-image: url("../images/tools/wordpress.png");
 }
 
-/* line 110, sass/_backgrounds.sass */
+/* line 107, sass/_backgrounds.sass */
 .express {
   background-image: url("../images/tools/express.png");
 }
 
-/* line 113, sass/_backgrounds.sass */
+/* line 110, sass/_backgrounds.sass */
 .handlebars {
   background-image: url("../images/tools/handlebars.png");
 }
 
-/* line 116, sass/_backgrounds.sass */
+/* line 113, sass/_backgrounds.sass */
 .grunt {
   background-image: url("../images/tools/grunt.png");
 }
 
-/* line 119, sass/_backgrounds.sass */
+/* line 116, sass/_backgrounds.sass */
 .ruby {
   background-image: url("../images/tools/ruby.png");
 }
 
-/* line 122, sass/_backgrounds.sass */
+/* line 119, sass/_backgrounds.sass */
 .rails {
   background-image: url("../images/tools/rails.png");
 }
 
-/* line 125, sass/_backgrounds.sass */
+/* line 122, sass/_backgrounds.sass */
 .sinatra {
   background-image: url("../images/tools/sinatra.png");
 }
 
-/* line 128, sass/_backgrounds.sass */
+/* line 125, sass/_backgrounds.sass */
 .nedb {
   background-image: url("../images/tools/nedb.png");
 }
 
-/* line 131, sass/_backgrounds.sass */
+/* line 128, sass/_backgrounds.sass */
 .githubapi {
   background-image: url("../images/tools/githubapi.png");
 }
