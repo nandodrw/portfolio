@@ -1,6 +1,15 @@
 html
   font-family: 'Ubuntu', sans-serif
 
+html
+  font-size: 16px
+  @media screen and (max-width: $page-break-1)
+    font-size: 10px
+  @media screen and (max-width: $page-break-2)
+    font-size: 8px
+  @media screen and (max-width: $page-break-3)
+    font-size: 7.5px
+
 .orange-font
   color: $orange-1
 
@@ -10,3 +19,42 @@ html
 .content-font
   line-height: 1.5
   font-size: 1.2em
+
+.bold-text
+  font-weight: 500
+
+@font-face
+  font-family: "Flaticon"
+  src: url("flaticon.eot")
+  src: url("flaticon.eot#iefix") format("embedded-opentype"), url("flaticon.woff") format("woff"), url("flaticon.ttf") format("truetype"), url("flaticon.svg") format("svg")
+  font-weight: normal
+  font-style: normal
+
+[class^="flaticon-"]:before, [class*=" flaticon-"]:before,
+[class^="flaticon-"]:after, [class*=" flaticon-"]:after
+  font-family: Flaticon
+  font-size: 1.2em
+  font-style: normal
+  // margin-left: 20px
+
+.flaticon-github12:before
+  content: "\e000"
+
+.flaticon-linkedin2:before
+  content: "\e001"
+
+.flaticon-pause47:before
+  content: "\e002"
+
+.flaticon-play87:before
+  content: "\e003"
+
+.flaticon-player8:before
+  content: "\e004"
+
+.flaticon-rewind:before
+  content: "\e005"
+
+.flaticon-twitter47:before
+  content: "\e006"
+

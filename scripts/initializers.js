@@ -90,7 +90,6 @@
     var mainPortBox = document.getElementsByClassName('main-port-box')[0];
     mainPortBox.style.transform = "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -"+spectProjectHeigth+", 1)";
 
-    console.log('3d ajudstment',spectProjectHeigth);
     $('.main-box-back').css("transform","rotate3d( 0, 1, 0, 180deg) rotate3d(0, 0, 1, 180deg) translate3d(0,0,"+spectProjectHeigth+"px)");
     $('.main-box-front').css("transform","translate3d(0,0,"+spectProjectHeigth+"px)");
 
@@ -148,9 +147,9 @@
       }
     });
 
-    // parallax
-    $('#blob-container').css("width", $('body').css('width'));
-    $('#blob-container').css("height",$('body').css('height'));
+    // inicialize side decoration dimentions
+    $('#side-decoration').css("height", $('#content').css("height"));
+
   });
 
 })();

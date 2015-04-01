@@ -8,6 +8,9 @@
 
 	<title>Fernando Catacora Rojas</title>
 	<link href='http://fonts.googleapis.com/css?family=Ubuntu:300,400,700' rel='stylesheet' type='text/css'>
+	<link rel="icon"
+      type="image/png"
+      href="favicon.png">
 
 	<!-- build:style style -->
 		<link type="text/css" rel="stylesheet" href="/path/to/debug/style.min.css" />
@@ -19,7 +22,7 @@
 
 
 
-	<section id="content" class='content-container mid-bottom-rigth-radio mid-top-rigth-radio noise-background rigth-paper-shadow'>
+	<section id="content" class='content-container mid-bottom-rigth-radio mid-top-rigth-radio noise-background rigth-paper-shadow mobile-flag-hide'>
 
 		<div class="full-container mid-bottom-rigth-radio mid-top-rigth-radio transparent-paper">
 
@@ -48,9 +51,8 @@
 					<div class="width-gld-long full-height left">
 
 						<div class="card-shadow-ligth paper-card card-box border-box-model full-height width-2 blue-font content-font s-overflow margin-right-1">
-							<p>I'm technologist with a passion about Front End Web Development and creativity, giving highly interactive and rich experiences to Web and Mobile folks.</p>
-							<p class="top-margin-1">As a technologist I'm feeling excited and lucky to be part of such a great moment on Web and Mobile Development world. I Feel great when testing and experimenting with new technologies.</p>
-							<p class="top-margin-1">As a design enthusiast, I really enjoy to part of motivated team, where collaboration and quality orientation allows to create joyful experiences for Web and Mobile users.</p>
+							<p>I'm technologist with a passion on Web Development, Design and Creativity. I put my best to give highly interactive and rich experiences through Web and Mobile applications.</p>
+							<p class="top-margin-1">I'm design enthusiast and a self made artist &mdash;at least that's what I like to think&mdash;. I really enjoy collaborate with folks from the different creatives areas &mdash;I consider technology as a creative area too&mdash; in order to build great applications.</p>
 						</div>
 					</div>
 
@@ -64,7 +66,7 @@
 
 						<div id="box1"class="box">
 							<div class="top-face"></div>
-							<div class="link_map small-top-left-radio small-bottom-left-radio center-text"><a href="#portfolio" class="top-margin-2">Portfolio</a></div>
+							<div id='portfolio-link' class="link_map small-top-left-radio small-bottom-left-radio center-text"><a href="#portfolio" class="top-margin-2">Portfolio</a></div>
 		            <div class="right-face"></div>
 							<div class="bottom-face"></div>
 						</div>
@@ -72,14 +74,14 @@
 
 						<div id="box2" class="box">
 							<div class="top-face"></div>
-							<div class="link_map center-text"><a href="#knowledge" class="top-margin-2">Skills</a></div>
+							<div id='skills-link' class="link_map center-text"><a href="#knowledge" class="top-margin-2">Skills</a></div>
 							<div class="bottom-face"></div>
 						</div>
 
 
 						<div id="box3" class="box">
 							<div class="top-face"></div>
-							<div class="link_map center-text"><a href="#experience" class="top-margin-2">Experience</a></div>
+							<div id='experience-link' class="link_map center-text"><a href="#experience" class="top-margin-2">Experience</a></div>
 							<div class="bottom-face"></div>
 						</div>
 
@@ -87,7 +89,7 @@
 						<div id="box4" class="box">
 							<div class="top-face"></div>
 		            <div class="left-face"></div>
-							<div class="link_map small-top-rigth-radio center-text small-bottom-rigth-radio"><a href="#contact" class="top-margin-2">Contact</a></div>
+							<div id='contact-link' class="link_map small-top-rigth-radio center-text small-bottom-rigth-radio"><a href="#contact" class="top-margin-2">Contact</a></div>
 							<div class="bottom-face"></div>
 						</div>
 
@@ -96,9 +98,6 @@
 
 			<div class="border-box"></div>
 			<div class="border-box"></div>
-
-
-
 		</section>
 
 		<section id="portfolio">
@@ -146,25 +145,25 @@
 				<div class="border-box"></div>
 
 			  <div class="slider-controller left">
-					<div id="p1" class="switch proj"></div>
-				  <div id="p2"class="switch proj ready"></div>
-				  <div id="p3" class="switch proj ready"></div>
-				  <div id="p4"class="switch proj ready"></div>
-				  <div id="p5" class="switch proj ready"></div>
-				  <div id="p6"class="switch proj ready"></div>
-				  <div id="p7"class="switch proj ready"></div>
-				  <div id="p8"class="switch proj ready"></div>
-				  <div class="move-ctr-container border-box-model left">
-				  	<div class="switch ctr play grunt logo-background"></div>
-				  	<div class="switch ctr pause ready"></div>
+					<div id="p1" class="switch proj"><p class='switch-text'>Start Mining</p></div>
+				  <div id="p2"class="switch proj ready"><p class='switch-text'>Sora</p></div>
+				  <div id="p3" class="switch proj ready"><p class='switch-text'>Octolog</p></div>
+				  <div id="p4"class="switch proj ready"><p class='switch-text'>MakerSquare</p></div>
+				  <div id="p5" class="switch proj ready"><p class='switch-text'>Biia Lab</p></div>
+				  <div id="p6"class="switch proj ready"><p class='switch-text'>Startup Ranking</p></div>
+				  <div id="p7"class="switch proj ready"><p class='switch-text'>Portfolio</p></div>
+				  <div id="p8"class="switch proj ready"><p class='switch-text'>Code Lessons</p></div>
+				  <div class="move-ctr-container simple-shadow border-box-model left">
+				  	<div class="switch ctr play"><span class='switch-text-symbol flaticon-play87'></span></div>
+				  	<div class="switch ctr pause ready"><span class='switch-text-symbol flaticon-pause47'></span></div>
 				  </div>
 			  </div>
 
 				<div class="border-box"></div>
 			</div>
-
 		</section>
-		<section id="knowledge">
+
+		<section class='top-margin-6' id="knowledge">
 
 			<div class="section-container">
 
@@ -181,23 +180,23 @@
 				<div class="border-box"></div>
 
 				<div class="cards perspective-1">
-					<nav>
-						<div class="left">
-							<a class="panel-stitcher" title="software-ing">Software Engineering</a>
-							<a class="panel-stitcher" title="design">Design</a>
-							<a class="panel-stitcher" title="code">Code</a>
-							<a class="panel-stitcher" title="soft">Soft Skills</a>
-							<a class="panel-stitcher" title="finance">Finance</a>
+					<nav class="card-controller">
+						<div class="threeone-height-long left">
+							<a id='1' class="panel-stitcher padding-box-1 border-box-model" title="software-ing">Software Engineering</a>
+							<a id='2' class="panel-stitcher padding-box-1 left-margin-1 border-box-model" title="design">Design</a>
+							<a id='3' class="panel-stitcher active padding-box-1 left-margin-1 border-box-model" title="code">Code - Programing</a>
+							<a id='4' class="panel-stitcher padding-box-1 left-margin-1 border-box-model" title="soft">Soft Skills</a>
+							<a id='5' class="panel-stitcher padding-box-1 left-margin-1 border-box-model" title="finance">Business</a>
 						</div>
-						<div class="right">
-							<a class="panel-control" title="prev">Previous</a>
-							<a class="panel-control" title="change">Pause</a>
-							<a class="panel-control" title="next">Next</a>
+						<div class="threeone-height-short  border-box-model right">
+							<a class="panel-control navigation padding-box-1 flaticon-rewind" title="prev"></a>
+							<a class="panel-control navigation padding-box-1 left-margin-1 border-box-model flaticon-pause47" title="change"></a>
+							<a class="panel-control navigation padding-box-1 left-margin-1 border-box-model flaticon-player8" title="next"></a>
 						</div>
 					</nav>
 
 					<div class="know-cards left">
-						<div id="software-ing" class="know-container card-shadow-ligth card-box border-box-model paper-card">
+						<div id="software-ing" class="know-container s-overflow card-shadow-ligth card-box border-box-model paper-card">
 							<h3 class="know-area">Software Engineering</h3>
 							<p class="know-content top-margin-1">
 								I put a lot of attention on implement Software Engineering best practices. The objective is to generate maintainable and predictable, and enhance the velocity when I'm delivering new software features.
@@ -206,116 +205,141 @@
 								I'm also a team player. I take advantage of the different tools of Software Engineering to collaborate with the other members of the development team.
 							</p>
 							<h4 class="know-subtitle top-margin-4">Related Knowledge</h4>
-							<p class="know-content top-margin-5"><b>Metodologies: </b> Scrum, agile, RUP</p>
-							<p class="know-content top-margin-2"><b>Best practices:</b> Cobit, OWASP</p>
+							<p class="know-content top-margin-5"><b class='bold-text'>Metodologies: </b> Scrum, agile, RUP</p>
+							<p class="know-content top-margin-2"><b class='bold-text'>Best practices:</b> Cobit, OWASP</p>
 						</div>
-						<div id="design" class="know-container card-shadow-ligth card-box border-box-model paper-card">
+						<div id="design" class="know-container s-overflow card-shadow-ligth card-box border-box-model paper-card">
 							<h3 class="know-area">Design</h3>
 							<p class="know-content top-margin-1">
-								I put a lot of attention on implement Software Engineering best practices. The objective is to generate maintainable and predictable, and enhance the velocity when I'm delivering new software features.
+								I'm UX practitioner. I always try to include user validation cycles in the projects I do. I've trained myself on design principles and user experience theory in order to participate on the product design cycle.
 							</p>
 							<p class="know-content top-margin-2">
-								I'm also a team player. I take advantage of the different tools of Software Engineering to collaborate with the other members of the development team.
+								As a Front End Engineer, I'm constantly studying design theory and design principles. My intention is to collaborate effectively with designers and add value to the design cycle.
+							</p>
+							<p class="know-content top-margin-2">
+								An impotant task I regulary do is to reseach about the current and new Web Tendencies for the Backend and the Front End side of Web Apps. In the case of Front End Development, I try to be updated about design trends and their impact on Web Development.
 							</p>
 							<h4 class="know-subtitle top-margin-4">Related Knowledge</h4>
-							<p class="know-content top-margin-5"><b>Metodologies: </b> Scrum, agile, RUP</p>
-							<p class="know-content top-margin-2"><b>Best practices:</b> Cobit, OWASP</p>
+							<p class="know-content top-margin-5"><b class='bold-text'>Tools: </b> Adobe Photoshop, Adobe Illustraitor</p>
+							<p class="know-content top-margin-2"><b class='bold-text'>Metodology:</b> UX design cycle, Responsive Design</p>
 						</div>
-						<div id="code" class="know-container card-shadow-ligth card-box border-box-model paper-card">
-							<h3 class="know-area">Code</h3>
+						<div id="code" class="know-container s-overflow card-shadow-ligth card-box border-box-model paper-card">
+							<h3 class="know-area">Code - Programing</h3>
 							<p class="know-content top-margin-1">
-								I put a lot of attention on implement Software Engineering best practices. The objective is to generate maintainable and predictable, and enhance the velocity when I'm delivering new software features.
+								I love to code and face new coding challenges. I'm specialized on the  Front End part of the Web Stack, but I also enjoy doing server side code.
 							</p>
 							<p class="know-content top-margin-2">
-								I'm also a team player. I take advantage of the different tools of Software Engineering to collaborate with the other members of the development team.
+								I pretty exited about work of diferent topics like WebGL technologies, optimize web sites performance, SEO software architecture consideration and emerging technologies.
 							</p>
 							<h4 class="know-subtitle top-margin-4">Related Knowledge</h4>
-							<p class="know-content top-margin-5"><b>Metodologies: </b> Scrum, agile, RUP</p>
-							<p class="know-content top-margin-2"><b>Best practices:</b> Cobit, OWASP</p>
+							<p class="know-content top-margin-5"><b class='bold-text'>Programing Lenguages: </b> JavaScript, Ruby, PHP, C, C++.</p>
+							<p class="know-content top-margin-2"><b class='bold-text'>JavaScript Frameworks:</b> Angular, React, JQuery, Meteor, Express, Handlebars, Node-Webkit.</p>
+							<p class="know-content top-margin-5"><b class='bold-text'>Markup Lenguages: </b> HTML, CSS.</p>
+							<p class="know-content top-margin-5"><b class='bold-text'>Enterprise Resouce Managment -ERP: </b> SAP.</p>
+							<p class="know-content top-margin-2"><b class='bold-text'>Ruby Frameworks:</b> Sinatra and Ruby on Rails.</p>
+							<p class="know-content top-margin-2"><b class='bold-text'>Repositiories:</b> Git, Surversion.</p>
 						</div>
-						<div id="soft" class="know-container card-shadow-ligth card-box border-box-model paper-card">
+						<div id="soft" class="know-container s-overflow card-shadow-ligth card-box border-box-model paper-card">
 							<h3 class="know-area">Soft Skills</h3>
 							<p class="know-content top-margin-1">
-								I put a lot of attention on implement Software Engineering best practices. The objective is to generate maintainable and predictable, and enhance the velocity when I'm delivering new software features.
+								I've been exposed to different professional and academic experiences. I've been exposed to project management, work on multidisciplinary teams and training on technical skills.
 							</p>
 							<p class="know-content top-margin-2">
-								I'm also a team player. I take advantage of the different tools of Software Engineering to collaborate with the other members of the development team.
+								Since I have a consultancy background , is natural for me to work with different levels of corporate management and operations. I also experienced the startup environment, I'm familiar with the agility and changing environment of a startup.
 							</p>
 							<h4 class="know-subtitle top-margin-4">Related Knowledge</h4>
-							<p class="know-content top-margin-5"><b>Metodologies: </b> Scrum, agile, RUP</p>
-							<p class="know-content top-margin-2"><b>Best practices:</b> Cobit, OWASP</p>
+							<p class="know-content top-margin-5"><b class='bold-text'>Skills: </b> Project Managment, Consultancy, training.</p>
+							<p class="know-content top-margin-2"><b class='bold-text'>Tools:</b> Office and Project Managment Software</p>
 						</div>
-						<div id="finance" class="know-container card-shadow-ligth card-box border-box-model paper-card">
-							<h3 class="know-area">Finance</h3>
+						<div id="finance" class="know-container s-overflow card-shadow-ligth card-box border-box-model paper-card">
+							<h3 class="know-area">Business Skills</h3>
 							<p class="know-content top-margin-1">
-								I put a lot of attention on implement Software Engineering best practices. The objective is to generate maintainable and predictable, and enhance the velocity when I'm delivering new software features.
+								During my old days as consultant and auditor, I've been exposed to different companies' areas, like marketing, finance, production and operations. I'm familiar with different regulations and best practices applied across enterprises.
 							</p>
 							<p class="know-content top-margin-2">
-								I'm also a team player. I take advantage of the different tools of Software Engineering to collaborate with the other members of the development team.
+								I'm personally interested on the financial investment world, I've been studying the topic, I took courses and even I obtained related certifications.
 							</p>
 							<h4 class="know-subtitle top-margin-4">Related Knowledge</h4>
-							<p class="know-content top-margin-5"><b>Metodologies: </b> Scrum, agile, RUP</p>
-							<p class="know-content top-margin-2"><b>Best practices:</b> Cobit, OWASP</p>
+							<p class="know-content top-margin-5">Fianacial Invesment, Risk Assestment, Mangment Consultancy, Segregation of Diuties.</p>
 						</div>
 					</div>
 
 				</div>
 			</div>
-
-
 		</section>
+
 		<section id="experience">
 
 			<div class="section-container">
 
 			<div class="border-box"></div>
-				<div class="section-title titles-background"><h2>Experience</h2></div>
+
+				<div class="section-title card-shadow small-top-rigth-radio small-bottom-rigth-radio left">
+					<div class="full-height small-top-rigth-radio small-bottom-rigth-radio full-width smoke-background full-background">
+						<div class="full-width  padding-left-1 border-box-model full-height small-top-rigth-radio small-bottom-rigth-radio redgrid rel-position">
+							<h2 class="sub-title abs-position blue-font">Experience</h2>
+						</div>
+					</div>
+				</div>
+
 				<div class="border-box"></div>
 
-				<div class="list-container">
+				<div class="list-container left">
 
 
 					<ul class="timeline">
 
 
-						<li>
+						<li class="top-margin-6 central-bullet">
 							<div class="direction-r">
 								<div class="flag-wrapper">
-									<span class="flag">MakerSquare</span>
-									<span class="time-wrapper"><span class="time">2013 - present</span></span>
+									<span class="flag card-shadow-ligth">MakerSquare</span>
+									<span class="time-wrapper card-shadow-ligth"><span class="time">2013 - present</span></span>
 								</div>
-								<div class="desc">My current employment. Way better than the position before!</div>
+								<span class="paper-card card-shadow-ligth border-radio-2 padding-box-2 desc">
+									<span class="position-desc">Software Engineer</span>
+									<span class="location-desc">Austin, Texas - USA</span>
+								</span>
 							</div>
 						</li>
 
 
-						<li>
+						<li class="top-margin-6 central-bullet">
 							<div class="direction-l">
 								<div class="flag-wrapper">
-									<span class="flag">BCP</span>
-									<span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+									<span class="time-wrapper card-shadow-ligth"><span class="time">2008 - 2011</span></span>
+									<span class="flag card-shadow-ligth">BCP</span>
 								</div>
-								<div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
+								<span class="paper-card card-shadow-ligth border-radio-2 padding-box-2 desc">
+									<span class="position-desc">Senior Technology Auditor</span>
+									<span class="location-desc">Lima - Peru</span>
+								</span>
 							</div>
 						</li>
 
-						<li>
+						<li class="top-margin-6 central-bullet">
 							<div class="direction-r">
 								<div class="flag-wrapper">
-									<span class="flag">Deloitte</span>
-									<span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+									<span class="flag card-shadow-ligth">Deloitte</span>
+									<span class="time-wrapper card-shadow-ligth"><span class="time">2008 - 2011</span></span>
 								</div>
-								<div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
+								<span class="paper-card card-shadow-ligth border-radio-2 padding-box-2 desc">
+									<span class="position-desc">Consultant</span>
+									<span class="location-desc">Lima - Peru</span>
+								</span>
 							</div>
 						</li>
 
-						<li>
+						<li class="top-margin-6 last-bullet">
 							<div class="direction-l">
 								<div class="flag-wrapper">
-									<span class="flag">KPMG</span>
-									<span class="time-wrapper"><span class="time">2008 - 2011</span></span>
+									<span class="time-wrapper card-shadow-ligth"><span class="time">2008 - 2011</span></span>
+									<span class="flag card-shadow-ligth">KPMG</span>
 								</div>
-								<div class="desc">A description of all the lectures and courses I have taken and my final degree?</div>
+								<span class="paper-card card-shadow-ligth border-radio-2 padding-box-2 desc">
+									<span class="position-desc">Junior Consultant</span>
+									<span class="location-desc">Lima - Peru</span>
+								</span>
 							</div>
 						</li>
 
@@ -324,33 +348,97 @@
 				</div>
 
 			</div>
-
 		</section>
+
 		<section id="contact">
+			<div class="section-container">
 
+				<div class="border-box"></div>
+
+				<div class="section-title card-shadow small-top-rigth-radio small-bottom-rigth-radio left">
+						<div class="full-height small-top-rigth-radio small-bottom-rigth-radio full-width smoke-background full-background">
+							<div class="full-width  padding-left-1 border-box-model full-height small-top-rigth-radio small-bottom-rigth-radio redgrid rel-position">
+								<h2 class="sub-title abs-position blue-font">Let's stay in touch!</h2>
+							</div>
+						</div>
+					</div>
+
+				<div class="border-box"></div>
+				<div class="border-box"></div>
+
+				<div class="threeone-width-long auto-margin">
+
+					<span class="width-gld-short top-margin-7 tag-holder left">
+						<label class='tag paper-card border-box-model border-radio-2 card-shadow-ligth padding-box-3  form-label' for="">Name:</label>
+					</span>
+					<input  id='name-form' class=' top-margin-5 data-input border-box-model width-gld-long border-radio-2 padding-box-2 card-shadow-ligth left' type="text" placeholder="Your name..">
+
+					<span class="width-gld-short top-margin-7 tag-holder left">
+						<label class='tag paper-card border-box-model border-radio-2 card-shadow-ligth padding-box-3  form-label' for="">Email:</label>
+					</span>
+					<input id='mail-form' class=' top-margin-5 data-input border-box-model width-gld-long border-radio-2 padding-box-2 card-shadow-ligth left' type="text" placeholder="Your e-mail..">
+
+					<span class="width-gld-short top-margin-7 tag-holder left">
+						<label class='tag paper-card border-box-model border-radio-2 card-shadow-ligth padding-box-3  form-label' for="">Message:</label>
+					</span>
+					<textarea id='text-form' class=' top-margin-5 data-input border-box-model width-gld-long border-radio-2 padding-box-2 card-shadow-ligth left' name="" id="" cols="30" rows="10" placeholder='Your message..'></textarea>
+
+					<span id='message-submit-buttom' class='full-width top-margin-7 left'><a class='submit-form paper-card padding-box-4 card-shadow-ligth right' href="">Send!</a></span>
+
+				</div>
+
+				<div class="border-box"></div>
+				<div class="border-box"></div>
+				<div class="border-box"></div>
+				<div class="border-box"></div>
+
+				<div class="threeone-width-long top-margin-7 auto-margin">
+					<span class="social-holder full-width left">
+						<label class='tag paper-card border-box-model border-radio-2 card-shadow-ligth padding-box-3  form-label' for="">Let's be social!</label>
+						<a class='social-tag left-margin-2 paper-card border-box-model border-radio-2 card-shadow-ligth padding-box-3 right flaticon-github12' href='https://github.com/nandodrw' target="_blank"></a>
+						<a class='social-tag left-margin-2 paper-card border-box-model border-radio-2 card-shadow-ligth padding-box-3 right flaticon-linkedin2' href='https://www.linkedin.com/in/fernandocatacora/' target="_blank"></a>
+						<a class='social-tag left-margin-2 paper-card border-box-model border-radio-2 card-shadow-ligth padding-box-3 right flaticon-twitter47' href='https://twitter.com/NandoDrw' target="_blank"></a>
+					</span>
+				</div>
+
+			</div>
 		</section	>
-
-
-		<footer></footer>
 
 		</div>
 
 	</section>
 
-	<section id="side-decoration" class="side-decoration">
-		<!-- <div id="blob-container">
-			<img id="blob-1" src="images/parallax/blob-1.png" />
-			<img id="blob-2" src="images/parallax/blob-2.png" />
-			<img id="blob-3" src="images/parallax/blob-3.png" />
-			<img id="blob-4" src="images/parallax/blob-4.png" />
-			<img id="blob-5" src="images/parallax/blob-5.png" />
-			<img id="blob-6" src="images/parallax/blob-6.png" />
-			<img id="blob-7" src="images/parallax/blob-7.png" />
-			<img id="blob-8" src="images/parallax/blob-8.png" />
-			<img id="blob-9" src="images/parallax/blob-9.png" />
-		</div>-->
+	<section id="side-decoration" class="side-decoration mobile-flag-hide">
+		 <div id="fly-container" class='full-width full-height rel-position'>
+			<img id="ele-1" class='fly-ele'	src="images/parallax/circle.png"/>
+			<img id="ele-2" class='fly-ele' src="images/parallax/flow.png" />
+			<img id="ele-3" class='fly-ele' src="images/parallax/orbit.png" />
+			<img id="ele-4" class='fly-ele' src="images/parallax/rocket.png"/>
+			<img id="ele-5" class='fly-ele' src="images/parallax/satelite.png"/>
+			<img id="ele-6" class='fly-ele' src="images/parallax/scripttag.png" />
+			<img id="ele-7" class='fly-ele' src="images/parallax/acuation.png" />
+			<img id="ele-8" class='fly-ele' src="images/parallax/binary.png" />
+			<img id="ele-9" class='fly-ele' src="images/parallax/control1.png" />
+			<img id="ele-10" class='fly-ele' src="images/parallax/controller2.png" />
+			<img id="ele-11" class='fly-ele' src="images/parallax/plantet.png" />
+		</div>
+	</section>
 
+	<section class="mobile-flag-show">
+		<div class="top-margin-6 header-box card-shado-blueprint small-top-rigth-radio small-bottom-rigth-radio left">
+				<div class="full-height small-top-rigth-radio small-bottom-rigth-radio full-width smoke-background full-background">
+					<div class="full-width  padding-left-1 border-box-model full-height small-top-rigth-radio small-bottom-rigth-radio redgrid">
+						<p>
+							<h1 class="main-title blue-font">Fernando Catacora</h1>
+							<h2 class="sub-title right-text bottom-padding-1 blue-font">&lt;personal_portfolio/&gt;</h2>
+						</p>
+					</div>
+				</div>
+			</div>
 
+			<div class="threeone-width-long paper-card margin-v card-shadow-blueprint-ligth border-box-model padding-box-2 left">
+				<p class='mobile-announcement'>Mobile experience coming soon. Please visit this site from a laptop or desktop computer.</p>
+			</div>
 	</section>
 
 			<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
@@ -412,8 +500,6 @@
 				</div>
 			</div>
 		</script>
-
-
 
 		<script type="text/html" id="project-spects-template-3">
 	    <div class="project-technologies card-box border-box-model full-size">

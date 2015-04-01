@@ -110,8 +110,6 @@
                 var mainPortBox = document.getElementsByClassName('main-port-box')[0];
                 var matrixContent = mainPortBox.style.transform;
                 if(matrixContent[6] === '3' && matrixContent[7] === 'd'){
-                    // console.log('!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!');
-                    // console.log('matrixContent 1:',matrixContent);
                     var matrixArr = matrixContent.substr(9,matrixContent.length-10).split(",");
 
                     switch (face){
@@ -148,10 +146,7 @@
                     }
 
                     matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                    // console.log('matrixContent 2:',matrixContent);
-                    // console.log('--------------------------------------------------------');
                     mainPortBox.style.transform = matrixContent;
-                    // $('.main-port-box').css('transform',matrixContent);
                 }
             },
 
@@ -524,7 +519,6 @@
       };
 
       applyStylesPanels = function(elementsArr,stylesArr){
-        // console.log(elementsArr,stylesArr)
         for(var i in elementsArr){
           elementsArr[i].css(stylesArr[i]);
         }
@@ -534,39 +528,31 @@
         applyStylesPanels(panelElements,panelStyles);
       };
 
-      changePanel = function(direction){
-        panelStyles = rotateArray(panelStyles,direction);
-        applyStylesPanels(panelElements,panelStyles);
+      updateCardControl = function (direction) {
+
+        var activeTag = 1;
+
+        $('.panel-stitcher').each(function () {
+          if ($(this).hasClass('active')) {
+            activeTag = parseInt( $(this).attr('id') );
+          }
+          $(this).removeClass('active');
+        })
+
+        if (direction == 'prev') {
+          activeTag = (activeTag > 1 ? (activeTag - 1) : 5);
+        } else {
+          activeTag = (activeTag < 5 ? (activeTag + 1) : 1);
+        }
+
+        $(".panel-stitcher[id=" + activeTag + "]").addClass("active");
+
       };
 
-      goToSpecificPanel = function(panel){
-        var objectivePanel = -1;
-        switch(panel){
-          case "software-ing":
-            objectivePanel = 0;
-            break;
-          case "design":
-            objectivePanel = 1;
-            break;
-          case "code":
-            objectivePanel = 2;
-            break;
-          case "soft":
-            objectivePanel = 3;
-            break;
-          case "finance":
-            objectivePanel = 4;
-            break;
-        };
-        if(objectivePanel > -1){
-          while(true){
-            panelStyles = rotateArray(panelStyles);
-            if(panelStyles[objectivePanel]["z-index"] == "3"){
-              break;
-            }
-          }
-          applyStylesPanels(panelElements,panelStyles);
-        }
+      changePanel = function(direction){
+        panelStyles = rotateArray(panelStyles,direction);
+        updateCardControl(direction);
+        applyStylesPanels(panelElements,panelStyles);
       };
 
       var knowSlider = {
@@ -574,7 +560,36 @@
           changePanel(direction);
         },
         goToSpecificPanel : function(panel){
-          goToSpecificPanel(panel);
+          // goToSpecificPanel(panel);
+
+          var objectivePanel = -1;
+          switch(panel){
+            case "software-ing":
+              objectivePanel = 0;
+              break;
+            case "design":
+              objectivePanel = 1;
+              break;
+            case "code":
+              objectivePanel = 2;
+              break;
+            case "soft":
+              objectivePanel = 3;
+              break;
+            case "finance":
+              objectivePanel = 4;
+              break;
+          };
+          if(objectivePanel > -1){
+            while(true){
+              panelStyles = rotateArray(panelStyles);
+              if(panelStyles[objectivePanel]["z-index"] == "3"){
+                break;
+              }
+            }
+            applyStylesPanels(panelElements,panelStyles);
+          }
+
         },
 
         timer : {},
@@ -587,7 +602,7 @@
             window.knowSlider.changePanel();
             this.timer = setInterval(function() {
                 window.knowSlider.changePanel();
-            },2000);
+            },3000);
           }
         }
 
@@ -601,10 +616,14 @@
 
         window.knowSlider.timer = setInterval(function() {
                 window.knowSlider.changePanel();
-        },2000);
+        },3000);
 
         $(".panel-stitcher").on("click",function(){
           window.knowSlider.goToSpecificPanel($(this).attr("title"));
+          $(".panel-stitcher").each(function(){
+            $(this).removeClass('active');
+          });
+          $(this).addClass('active');
         });
 
         $(".panel-control").on("click",function(){
@@ -614,6 +633,13 @@
               break;
             case "change":
               window.knowSlider.changeState();
+              if ($(this).hasClass('flaticon-pause47')) {
+                $(this).removeClass('flaticon-pause47');
+                $(this).addClass('flaticon-play87')
+              } else {
+                $(this).removeClass('flaticon-play87');
+                $(this).addClass('flaticon-pause47')
+              }
               break;
             case "next":
               window.knowSlider.changePanel("next");
