@@ -3,6 +3,7 @@
 
     $(document).ready(function(){
 
+
         //*****************************************************
         //**************    portfolio slider    ***************
         //*****************************************************
@@ -147,6 +148,10 @@
 
                     matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
                     mainPortBox.style.transform = matrixContent;
+                    mainPortBox.style.webkitTransform = matrixContent;
+                    mainPortBox.style.mozTransform = matrixContent;
+                    mainPortBox.style.msTransform = matrixContent;
+
                 }
             },
 
@@ -178,33 +183,77 @@
                         this.replaceArrValues(stepOneFaceOne,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
                         projectDetail.style.transform = matrixContent;
+
+                        projectDetail.style.webkitTransform = matrixContent;
+                        projectDetail.style.mozTransform = matrixContent;
+                        projectDetail.style.msTransform = matrixContent;
+
                         this.replaceArrValues(stepTwoFaceOne,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                        setTimeout(function(){projectDetail.style.transform = matrixContent},450);
+
+                        projectDetail.style.webkitTransform = matrixContent;
+                        projectDetail.style.mozTransform = matrixContent;
+                        projectDetail.style.msTransform = matrixContent;
+
+                        setTimeout(function(){
+                            projectDetail.style.transform = matrixContent;
+                            projectDetail.style.webkitTransform = matrixContent;
+                            projectDetail.style.mozTransform = matrixContent;
+                            projectDetail.style.msTransform = matrixContent;
+                        },450);
                         break;
                     case 2:
                         this.replaceArrValues(stepOneFaceTwo,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
+
                         projectDetail.style.transform = matrixContent;
+                        projectDetail.style.webkitTransform = matrixContent;
+                        projectDetail.style.mozTransform = matrixContent;
+                        projectDetail.style.msTransform = matrixContent;
+
                         this.replaceArrValues(stepTwoFaceTwo,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                        setTimeout(function(){projectDetail.style.transform = matrixContent},450);
+                        setTimeout(function(){
+                            projectDetail.style.transform = matrixContent;
+                            projectDetail.style.webkitTransform = matrixContent;
+                            projectDetail.style.mozTransform = matrixContent;
+                            projectDetail.style.msTransform = matrixContent;
+                        },450);
                         break;
                     case 3:
                         this.replaceArrValues(stepOneFaceThree,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
+
                         projectDetail.style.transform = matrixContent;
+                        projectDetail.style.webkitTransform = matrixContent;
+                        projectDetail.style.mozTransform = matrixContent;
+                        projectDetail.style.msTransform = matrixContent;
+
                         this.replaceArrValues(stepTwoFaceThree,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                        setTimeout(function(){projectDetail.style.transform = matrixContent},450);
+                        setTimeout(function(){
+                            projectDetail.style.transform = matrixContent;
+                            projectDetail.style.webkitTransform = matrixContent;
+                            projectDetail.style.mozTransform = matrixContent;
+                            projectDetail.style.msTransform = matrixContent;
+                        },450);
                         break;
                     case 4:
                         this.replaceArrValues(stepOneFaceFour,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
                         projectDetail.style.transform = matrixContent;
+                        projectDetail.style.webkitTransform = matrixContent;
+                        projectDetail.style.mozTransform = matrixContent;
+                        projectDetail.style.msTransform = matrixContent;
+
                         this.replaceArrValues(stepTwoFaceFour,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                        setTimeout(function(){projectDetail.style.transform = matrixContent},450);
+                        setTimeout(function(){
+                            projectDetail.style.transform = matrixContent;
+                            projectDetail.style.webkitTransform = matrixContent;
+                            projectDetail.style.mozTransform = matrixContent;
+                            projectDetail.style.msTransform = matrixContent;
+                        },450);
                         break;
                 };
             },
@@ -237,34 +286,74 @@
                     case 1:
                         this.replaceArrValues(stepOneFaceOne,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
+
                         projectSpects.style.transform = matrixContent;
+                        projectSpects.style.webkitTransform = matrixContent;
+                        projectSpects.style.mozTransform = matrixContent;
+                        projectSpects.style.msTransform = matrixContent;
+
                         this.replaceArrValues(stepTwoFaceOne,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                        setTimeout(function(){projectSpects.style.transform = matrixContent},450);
+                        setTimeout(function(){
+                            projectSpects.style.transform = matrixContent},450);
+                            projectSpects.style.webkitTransform = matrixContent;
+                            projectSpects.style.mozTransform = matrixContent;
+                            projectSpects.style.msTransform = matrixContent;
+
                         break;
                     case 2:
                         this.replaceArrValues(stepOneFaceTwo,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
+
                         projectSpects.style.transform = matrixContent;
+                        projectSpects.style.webkitTransform = matrixContent;
+                        projectSpects.style.mozTransform = matrixContent;
+                        projectSpects.style.msTransform = matrixContent;
+
                         this.replaceArrValues(stepTwoFaceTwo,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                        setTimeout(function(){projectSpects.style.transform = matrixContent},450);
+                        setTimeout(function(){
+                            projectSpects.style.transform = matrixContent;
+                            projectSpects.style.webkitTransform = matrixContent;
+                            projectSpects.style.mozTransform = matrixContent;
+                            projectSpects.style.msTransform = matrixContent;
+                        },450);
                         break;
                     case 3:
                         this.replaceArrValues(stepOneFaceThree,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
+
                         projectSpects.style.transform = matrixContent;
+                        projectSpects.style.webkitTransform = matrixContent;
+                        projectSpects.style.mozTransform = matrixContent;
+                        projectSpects.style.msTransform = matrixContent;
+
                         this.replaceArrValues(stepTwoFaceThree,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                        setTimeout(function(){projectSpects.style.transform = matrixContent},450);
+                        setTimeout(function(){
+                            projectSpects.style.transform = matrixContent;
+                            projectSpects.style.webkitTransform = matrixContent;
+                            projectSpects.style.mozTransform = matrixContent;
+                            projectSpects.style.msTransform = matrixContent;
+                        },450);
                         break;
                     case 4:
                         this.replaceArrValues(stepOneFaceFour,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
+
                         projectSpects.style.transform = matrixContent;
+                        projectSpects.style.webkitTransform = matrixContent;
+                        projectSpects.style.mozTransform = matrixContent;
+                        projectSpects.style.msTransform = matrixContent;
+
                         this.replaceArrValues(stepTwoFaceFour,matrixArr);
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
-                        setTimeout(function(){projectSpects.style.transform = matrixContent},450);
+                        setTimeout(function(){
+                            projectSpects.style.transform = matrixContent;
+                            projectSpects.style.webkitTransform = matrixContent;
+                            projectSpects.style.mozTransform = matrixContent;
+                            projectSpects.style.msTransform = matrixContent;
+                        },450);
                         break;
                 };
             },
@@ -482,27 +571,43 @@
         // .left-up
         {
           "z-index": "2",
-          "transform": "translate3D(-33%,-17%,-200px) scale3d(.5,.5,1)"
+          "transform": "translate3D(-33%,-17%,-200px) scale3d(.5,.5,1)",
+          "-webkit-transform": "translate3D(-33%,-17%,-200px) scale3d(.5,.5,1)",
+          "-moz-transform": "translate3D(-33%,-17%,-200px) scale3d(.5,.5,1)",
+          "-ms-transform": "translate3D(-33%,-17%,-200px) scale3d(.5,.5,1)"
+
         },
         // .right-up
         {
           "z-index": "2",
-          "transform": "translate3D(66.5%,-17%,-200px) scale3d(.5,.5,1)"
+          "transform": "translate3D(66.5%,-17%,-200px) scale3d(.5,.5,1)",
+          "-webkit-transform": "translate3D(66.5%,-17%,-200px) scale3d(.5,.5,1)",
+          "-moz-transform": "translate3D(66.5%,-17%,-200px) scale3d(.5,.5,1)",
+          "-ms-transform": "translate3D(66.5%,-17%,-200px) scale3d(.5,.5,1)"
         },
         // .center
         {
           "z-index": "3",
-          "transform": "translate3D(16.5%,30%,0) scale3d(1,1,1)"
+          "transform": "translate3D(16.5%,30%,0) scale3d(1,1,1)",
+          "-webkit-transform": "translate3D(16.5%,30%,0) scale3d(1,1,1)",
+          "-ms-transform": "translate3D(16.5%,30%,0) scale3d(1,1,1)",
+          "-moz-transform": "translate3D(16.5%,30%,0) scale3d(1,1,1)"
         },
         // .left-donw
         {
           "z-index": "2",
-          "transform": "translate3D(-33%,66.5%,-200px) scale3d(.5,.5,1)"
+          "transform": "translate3D(-33%,66.5%,-200px) scale3d(.5,.5,1)",
+          "-webkit-transform": "translate3D(-33%,66.5%,-200px) scale3d(.5,.5,1)",
+          "-moz-transform": "translate3D(-33%,66.5%,-200px) scale3d(.5,.5,1)",
+          "-ms-transform": "translate3D(-33%,66.5%,-200px) scale3d(.5,.5,1)"
         },
         // .right-donw
         {
           "z-index": "2",
-          "transform": "translate3D(66.5%,67%,-200px) scale3d(.5,.5,1)"
+          "transform": "translate3D(66.5%,67%,-200px) scale3d(.5,.5,1)",
+          "-webkit-transform": "translate3D(66.5%,67%,-200px) scale3d(.5,.5,1)",
+          "-moz-transform": "translate3D(66.5%,67%,-200px) scale3d(.5,.5,1)",
+          "-ms-transform": "translate3D(66.5%,67%,-200px) scale3d(.5,.5,1)"
         }
       ];
 

@@ -62,7 +62,7 @@
   height: 100%
   position: relative
   float: left
-  transform-style: preserve-3d
+  @include prefix(transform-style, preserve-3d)
   cursor: pointer
 
 .top-face
@@ -70,8 +70,8 @@
   position: absolute
   width: 100%
   height: 100%
-  transform-origin: center top
-  backface-visibility: hidden
+  @include prefix(transform-origin, "center top")
+  @include prefix(backface-visibility, hidden)
 
 .left-face
   background-color: darken($ligth-gray, 40%)
@@ -91,7 +91,7 @@
   background-color: $green-1
   font-size: 200%
   position: absolute
-  transition: border .5s, margin .5s
+  @include prefix(transition, "border .5s, margin .5s")
 
 .link_map a
   color: $blue-1
@@ -145,11 +145,11 @@
 
 +keyframes(dribling)
   0%
-    transform: rotate3d( 0, 0, 0, 0 )
+    @include prefix(transform, rotate3d( 0, 0, 0, 0 ))
   60%
-    transform: rotate3d( -1, 0, 0, 15deg ) translate3d(0, 0, 3px)
+    @include prefix(transform, "rotate3d( -1, 0, 0, 15deg ) translate3d(0, 0, 3px)")
   100%
-    transform: rotate3d( 1, 0, 0, 15deg ) translate3d(0, 0, 4.5px)
+    @include prefix(transform, "rotate3d( 1, 0, 0, 15deg ) translate3d(0, 0, 4.5px)")
 
 // --------------------
 // Portfolio Container
@@ -162,11 +162,11 @@
   margin-left: 4%
 
 .main-port-box
-  transform-style: preserve-3d
+  @include prefix(transform-style, preserve-3d)
   width: $golden-long
   position: relative
   z-index: 3
-  transition: transform .7s ease
+  @include prefix-transition-transform(0.7s ease)
   cursor: pointer
 
 .behind-scenes
@@ -174,31 +174,32 @@
   z-index: 2
 
 .project-detail
-  transform-style: preserve-3d
+  @include prefix(transform-style, preserve-3d)
   height: $golden-long
   z-index: 3
-  transition: transform .35s ease
+  @include prefix-transition-transform(0.35s ease)
   cursor: pointer
 
 .detail-box-right
-  transform-origin: right center
+  @include prefix(transform-origin, "right center")
 
 .detail-box-left
-  transform-origin: left center
+  @include prefix(transform-origin, "left center")
 
 .project-spects
-  transform-style: preserve-3d
+  @include prefix(transform-style, preserve-3d)
   height: $golden-short
   z-index: 2
-  transition: transform .4s linear
+  @include prefix-transition-transform(0.4s linear)
   cursor: pointer
 
 
 .spects-box-right
-  transform-origin: right center
+  @include prefix(transform-origin, "right center")
 
 .spects-box-left
-  transform-origin: left center
+  @include prefix(transform-origin, "left center")
+
 
 .slider-controller
   height: 12%
@@ -237,7 +238,7 @@
   width: 100%
   height: 20%
   border-radius: 2px
-  background: linear-gradient(to bottom, #8F9852 0%, rgba(151, 151, 151, 0.44) 15%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%)
+  @include background-linear-gradient(("to bottom, #8F9852 0%, rgba(151, 151, 151, 0.44) 15%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%)"))
 
 .switch .switch-text-symbol
   position: relative
@@ -281,7 +282,7 @@
   left: 0
   width: 100%
   height: 50%
-  background: linear-gradient(to bottom,  darken($green-1, 20%) 0%, rgba(151, 151, 151, 0.44) 35%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%)
+  @include background-linear-gradient(("to bottom,  " + darken($green-1, 20%) + " 0%, rgba(151, 151, 151, 0.44) 35%,rgba(65,50,0,0) 68%,rgba(65,50,0,0) 100%"))
   border-radius: 2px
 
 
@@ -328,7 +329,7 @@
 .cards
   position: relative
   height: 100%
-  transform-style: preserve-3d
+  @include prefix(transform-style, preserve-3d)
   width: 100%
 
 .card-controller
@@ -341,7 +342,7 @@
   position: absolute
 
 .know-cards
-  transform-style: preserve-3d
+  @include prefix(transform-style, preserve-3d)
   width: 100%
   height: 87%
 
@@ -352,19 +353,19 @@
   position: absolute
 
 #design.know-container
-  @include prefix(transition, "transform 1s,left 1s,right 1s,top 1s, bottom 1s")
+  @include prefix-transition-transform("1s,left 1s,right 1s,top 1s, bottom 1s")
 
 #code.know-container
-  @include prefix(transition, "transform 1s,left 1s,right 1s,top 1s, bottom 1s")
+  @include prefix-transition-transform("1s,left 1s,right 1s,top 1s, bottom 1s")
 
 #soft.know-container
-  @include prefix(transition, "transform 1s,left 1s,right 1s,top 1s, bottom 1s")
+  @include prefix-transition-transform("1s,left 1s,right 1s,top 1s, bottom 1s")
 
 #finance.know-container
-  @include prefix(transition, "transform 1s,left 1s,right 1s,top 1s, bottom 1s")
+  @include prefix-transition-transform("1s,left 1s,right 1s,top 1s, bottom 1s")
 
 #software-ing.know-container
-  @include prefix(transition, "transform 1s,left 1s,right 1s,top 1s, bottom 1s")
+  @include prefix-transition-transform("1s,left 1s,right 1s,top 1s, bottom 1s")
 
 .know-cards
   color: $blue-1
@@ -441,7 +442,6 @@
   height: 108px
   width: 9px
   @include background-linear-gradient(( darken($green-1, 10%) + ", " + $green-1 + " 40%, " + lighten($green-1, 10%) + " 60%, transparent 70%" ))
-  // background-color: darken($green-1, 10%)
   position: absolute
   left: 37.2%
   margin-top: -15px
