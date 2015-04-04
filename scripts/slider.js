@@ -121,28 +121,28 @@
                             matrixArr[10] = "1";
                             break;
                         case 2:
-                            matrixArr[5] = "6.12323399573677e-17";
-                            // matrixArr[5] = "0.0000000000000000612323399573677";
+                            // matrixArr[5] = "6.12323399573677e-17";
+                            matrixArr[5] = "0.0000000000000000612323399573677";
                             matrixArr[6] = "-1";
                             matrixArr[9] = "1";
-                            matrixArr[10] = "6.12323399573677e-17";
-                            // matrixArr[10] = "0.0000000000000000612323399573677";
+                            // matrixArr[10] = "6.12323399573677e-17";
+                            matrixArr[10] = "0.0000000000000000612323399573677";
                             break;
                         case 3:
                             matrixArr[5] = "-1";
-                            matrixArr[6] = "-1.22464679914735e-16";
-                            // matrixArr[6] = "-0.000000000000000122464679914735";
-                            matrixArr[9] = "1.22464679914735e-16";
-                            // matrixArr[9] = "0.000000000000000122464679914735";
+                            // matrixArr[6] = "-1.22464679914735e-16";
+                            matrixArr[6] = "-0.000000000000000122464679914735";
+                            // matrixArr[9] = "1.22464679914735e-16";
+                            matrixArr[9] = "0.000000000000000122464679914735";
                             matrixArr[10] = "-1";
                             break;
                         case 4:
-                            matrixArr[5] = "-1.83697019872103e-16";
-                            // matrixArr[5] = "-0.000000000000000183697019872103";
+                            // matrixArr[5] = "-1.83697019872103e-16";
+                            matrixArr[5] = "-0.000000000000000183697019872103";
                             matrixArr[6] = "1";
                             matrixArr[9] = "-1";
-                            matrixArr[10] = "-1.83697019872103e-16";
-                            // matrixArr[10] = "-0.000000000000000183697019872103";
+                            // matrixArr[10] = "-1.83697019872103e-16";
+                            matrixArr[10] = "-0.000000000000000183697019872103";
                             break;
                     }
 
@@ -157,7 +157,7 @@
 
             rotateToFaceProDetail : function(face){
 
-                var projectDetail = document.getElementsByClassName('project-detail')[0];
+                var projectDetail = document.getElementById('project-detail');
                 var matrixContent = projectDetail.style.transform;
 
                 var matrixArr = matrixContent.substr(9,matrixContent.length-10).split(",");
@@ -185,6 +185,7 @@
                         projectDetail.style.transform = matrixContent;
 
                         projectDetail.style.webkitTransform = matrixContent;
+                        // $('#project-detail').css('-webkit-transform', "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -186.5, 1)")
                         projectDetail.style.mozTransform = matrixContent;
                         projectDetail.style.msTransform = matrixContent;
 
@@ -198,6 +199,7 @@
                         setTimeout(function(){
                             projectDetail.style.transform = matrixContent;
                             projectDetail.style.webkitTransform = matrixContent;
+                            // $('#project-detail').css('-webkit-transform', "matrix3d(-0.6,0,-9.79717439317883e-17,0,0,0.6,0,0,9.79717439317883e-17,0,-0.6,0,0,0, -186.5, 1)")
                             projectDetail.style.mozTransform = matrixContent;
                             projectDetail.style.msTransform = matrixContent;
                         },450);
@@ -208,6 +210,7 @@
 
                         projectDetail.style.transform = matrixContent;
                         projectDetail.style.webkitTransform = matrixContent;
+                        // $('#project-detail').css('-webkit-transform', "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -186.5, 1)")
                         projectDetail.style.mozTransform = matrixContent;
                         projectDetail.style.msTransform = matrixContent;
 
@@ -216,6 +219,7 @@
                         setTimeout(function(){
                             projectDetail.style.transform = matrixContent;
                             projectDetail.style.webkitTransform = matrixContent;
+                            // $('#project-detail').css('-webkit-transform', "matrix3d(-0.6,0,-9.79717439317883e-17,0,0,0.6,0,0,9.79717439317883e-17,0,-0.6,0,0,0, -186.5, 1)")
                             projectDetail.style.mozTransform = matrixContent;
                             projectDetail.style.msTransform = matrixContent;
                         },450);
@@ -226,6 +230,7 @@
 
                         projectDetail.style.transform = matrixContent;
                         projectDetail.style.webkitTransform = matrixContent;
+                        // $('#project-detail').css('-webkit-transform', "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -186.5, 1)")
                         projectDetail.style.mozTransform = matrixContent;
                         projectDetail.style.msTransform = matrixContent;
 
@@ -234,6 +239,7 @@
                         setTimeout(function(){
                             projectDetail.style.transform = matrixContent;
                             projectDetail.style.webkitTransform = matrixContent;
+                            // $('#project-detail').css('-webkit-transform', "matrix3d(-0.6,0,-9.79717439317883e-17,0,0,0.6,0,0,9.79717439317883e-17,0,-0.6,0,0,0, -186.5, 1)")
                             projectDetail.style.mozTransform = matrixContent;
                             projectDetail.style.msTransform = matrixContent;
                         },450);
@@ -243,6 +249,7 @@
                         matrixContent = "matrix3d(" + matrixArr.join(",") + ")";
                         projectDetail.style.transform = matrixContent;
                         projectDetail.style.webkitTransform = matrixContent;
+                        // $('#project-detail').css('-webkit-transform', "matrix3d(1, 0, 0, 0, 0, 1, 0, 0, 0, 0, 1, 0, 0, 0, -186.5, 1)")
                         projectDetail.style.mozTransform = matrixContent;
                         projectDetail.style.msTransform = matrixContent;
 
@@ -251,6 +258,7 @@
                         setTimeout(function(){
                             projectDetail.style.transform = matrixContent;
                             projectDetail.style.webkitTransform = matrixContent;
+                            // $('#project-detail').css('-webkit-transform', "matrix3d(-0.6,0,-9.79717439317883e-17,0,0,0.6,0,0,9.79717439317883e-17,0,-0.6,0,0,0, -186.5, 1)")
                             projectDetail.style.mozTransform = matrixContent;
                             projectDetail.style.msTransform = matrixContent;
                         },450);
@@ -395,9 +403,9 @@
 
             rotateSliderToFace : function(face) {
 
-                sliderFunctions.rotateToFaceMainBox(face);
-                sliderFunctions.rotateToFaceProDetail(face);
-                sliderFunctions.rotateToFaceProSpecs(face)
+                requestAnimFrame(function(){sliderFunctions.rotateToFaceMainBox(face)});
+                requestAnimFrame(function(){sliderFunctions.rotateToFaceProDetail(face)});
+                requestAnimFrame(function(){sliderFunctions.rotateToFaceProSpecs(face)});
                 sliderFunctions.currentFace = face;
             },
 
@@ -630,7 +638,7 @@
       };
 
       initializePanels = function(){
-        applyStylesPanels(panelElements,panelStyles);
+        requestAnimFrame(function(){applyStylesPanels(panelElements,panelStyles)});
       };
 
       updateCardControl = function (direction) {
@@ -657,7 +665,7 @@
       changePanel = function(direction){
         panelStyles = rotateArray(panelStyles,direction);
         updateCardControl(direction);
-        applyStylesPanels(panelElements,panelStyles);
+        requestAnimFrame(function(){applyStylesPanels(panelElements,panelStyles)});
       };
 
       var knowSlider = {
